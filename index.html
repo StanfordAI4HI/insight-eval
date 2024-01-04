@@ -6,6 +6,7 @@
     <!-- <script src="jspsych/plugin-html-keyboard-response.js"></script> -->
     <!-- <script src="jspsych/plugin-survey-likert.js"></script> -->
     <script src="jspsych/plugin-html-slider-response.js"></script>
+    <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -20,11 +21,26 @@
         min: -1,
         max: 1,
         start: 0,
-        step: 0.01, // Adjust the step size as needed
-        slider_width: 400 // Adjust the width of the slider as needed
+        step: 0.01,
+        slider_width: 400
       };
 
-      jsPsych.run([slider_trial]);
+      const on_finish_callback = () => {
+        // This function will be called when the experiment ends
+        const surveyData = {
+          responses: jsPsych.data.get().json() // Collect all the response data
+        };
+
+        submitToProliferate(surveyData);
+      };
+
+      jsPsych.run([slider_trial]).then(on_finish_callback);
+
+      function submitToProliferate(data) {
+        // Implement the submission logic to Proliferate
+        // Replace with the correct function call or API endpoint provided by Proliferate
+        proliferate.submit(data);
+      }
     </script>
 
   </body>
