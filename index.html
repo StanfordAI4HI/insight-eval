@@ -2,15 +2,98 @@
 <html>
   <head>
     <title>My experiment</title>
+    <style>
+      #submit-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    
+      #submit-btn {
+        /* Add any additional styling you want for the button here */
+      }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jspsych/jspsych.js"></script>
     <script src="jspsych/plugin-html-slider-response.js"></script> 
     <script src="https://proliferate.alps.science/static/js/proliferate.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
 
     <script>
+      function parseCsv(csvText) {
+        return new Promise((resolve, reject) => {
+          Papa.parse(csvText, {
+            header: true,
+            complete: (results) => {
+              resolve(results.data);
+            },
+            error: (error) => {
+              reject(error);
+            }
+          });
+        });
+      }
+      // Function to fetch and parse CSV data
+      async function fetchCsvData(url) {
+        const response = await fetch(url);
+        const csvText = await response.text();
+        // Parse the CSV text into an array of objects (you might need a CSV parsing library or write a custom parser)
+        const data = await parseCsv(csvText);
+        return data;
+      }
+    
+      // Function to create trials from CSV data
+      function createTrialsFromCsvData(csvData) {
+        return csvData.map(row => ({
+          type: jsPsychHtmlSliderResponse,
+          stimulus: `A: ${row.instruction_A} <br> B: ${row.instruction_B}`,
+          labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
+          min: -1,
+          max: 1,
+          start: 0,
+          step: 0.01,
+          slider_width: 400
+        }));
+      }
+    
+      // Main experiment setup
+      async function setupExperiment() {
+        const csvData = await fetchCsvData('worksheet_pairs_20240101_sample.csv');
+        const trials = createTrialsFromCsvData(csvData);
+    
+        jsPsych.run(trials).then(() => {
+          const submitButtonHTML = `
+            <div id="submit-container">
+              <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
+            </div>`;
+          document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
+        });
+
+
+        function submitToProliferate() {
+          const surveyData = {
+            responses: jsPsych.data.get().json() // Collect all the response data
+          };
+          // Implement the submission logic to Proliferate
+          proliferate.submit(surveyData);
+
+          // Display a thank you message
+          document.body.innerHTML = '<p>Thank you for completing the survey!</p>';
+        }
+      }
+    
+      setupExperiment();
+    </script>    
+    <!-- <script>
       const jsPsych = initJsPsych();
 
       const slider_trial = {
@@ -40,7 +123,7 @@
         // Display a thank you message
         document.body.innerHTML = '<p>Thank you for completing the survey!</p>';
       }
-    </script>
+    </script> -->
 
   </body>
 </html>

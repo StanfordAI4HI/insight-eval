@@ -1,0 +1,75 @@
+instruction_A,post_test_score_A,index_A,instruction_B,post_test_score_B,index_B
+"You need to study a problem and its solution. Here's the problem: 
+A brownie recipe is asking for 350 grams of sugar, and a pound cake recipe requires 270 more grams of sugar than a brownie recipe. How many grams of sugar are needed for the pound cake? Here's its solution:
+Step 1: Identify the amount of sugar needed for the brownie recipe, which is 350 grams.
+Step 2: Understand that the pound cake recipe requires 270 more grams of sugar than the brownie recipe.
+Step 3: Add the additional 270 grams of sugar to the 350 grams required for the brownie recipe.
+Step 4: The total amount of sugar needed for the pound cake recipe is 350 grams + 270 grams = 620 grams.
+",20.0,0,"
+
+Today we are going to be working on setting up and solving systems of equations from word problems. This is a two-step process: first, we need to be able to correctly translate the word problem into equations (setting up the system) and second, solve the system of equations. Let's get started!
+
+Activity 1:
+Start with this problem related to sugar usage, somewhat similar to the previous one.
+""A chocolate cake recipe requires 400 grams of sugar, and a cheesecake recipe needs 320 grams more sugar than the chocolate cake. How many grams of sugar does the cheesecake need?""
+
+Now let's break this problem down together:
+
+Step 1: Determine the amount of sugar needed for the chocolate cake, which is 400 grams.
+Step 2: Understand that the cheesecake requires 320 more grams of sugar than the chocolate cake.
+Step 3: Add the additional 320 grams of sugar to the 400 grams needed for the chocolate cake.
+Step 4: The total amount of sugar required for the cheesecake recipe is 400 grams + 320 grams = 720 grams.
+
+Activity 2:
+Here's a word problem for you to practice setting up a system of equations.
+""Sarah has twice as many stamps as John. Together, they have 90 stamps. How many stamps does each person have?""
+
+Try to solve this problem by following these steps:
+Step 1: Let's call the number of stamps Sarah has ""S"" and the number of stamps John has ""J"".
+Step 2: We know that Sarah has twice as many stamps as John. This can be written as an equation: S = 2J.
+Step 3: We also know that Sarah and John together have 90 stamps. This can be written as another equation: S + J = 90.
+Step 4: Solve these equations to find out how many stamps each person has.
+
+Activity 3:
+Now, let's solve a system of equations. Here's the problem:
+""Bob is five years older than Alice. Two years from now, he will be twice her age. How old are Bob and Alice currently?""
+
+Here's how to approach this system of equations:
+Step 1: Let's call Bob's age ""B"" and Alice's age ""A"".
+Step 2: From the problem, we know that Bob is five years older than Alice, so we can write that as: B = A + 5.
+Step 3: Two years from now, Bob will be twice Alice's age. So we can write that as: (B+2) = 2*(A+2).
+Step 4: Solve these equations to find out Bob's and Alice's current ages.
+
+Remember, practice is key. Make sure to solve multiple problems of this kind to get a strong grasp on setting up and solving systems of equations.
+
+",48.88888888888889,1
+"You need to study a problem and its solution. Here's the problem: 
+A brownie recipe is asking for 350 grams of sugar, and a pound cake recipe requires 270 more grams of sugar than a brownie recipe. How many grams of sugar are needed for the pound cake? Here's its solution:
+Step 1: Identify the amount of sugar needed for the brownie recipe, which is 350 grams.
+Step 2: Understand that the pound cake recipe requires 270 more grams of sugar than the brownie recipe.
+Step 3: Add the additional 270 grams of sugar to the 350 grams required for the brownie recipe.
+Step 4: The total amount of sugar needed for the pound cake recipe is 350 grams + 270 grams = 620 grams.
+",20.0,0,"
+
+Title: Practice Worksheet - Systems of Equations 
+
+Problem 1:
+Jenny is saving money to buy a new video game which costs $75. She has already saved $20. If Jenny saves $10 per week, how many weeks will Jenny need to save to buy the video game? Write down the equation for the problem and solve it.
+
+Problem 2:
+John and Mary are selling lemonade. John sells a cup of lemonade for $5 and Mary sells it for $4. If 20 people came to their stand today, and they made a total of $90, how many cups did each of them sell? Formulate a system of equations to represent this situation and solve it.
+
+Problem 3:
+Two cars are traveling towards each other from a distance of 1000 miles apart. The first car is traveling at a speed of 50 miles per hour, and the other car is traveling at a speed of 60 miles per hour. In how many hours will the two cars meet? Write down the equations that represent this situation and solve them.
+
+Problem 4:
+You find a book and a pen and you observe the total price for both is $22. However, the book costs $3 more than twice the price of the pen. Can you find the price for each item? Formulate the system of equations and solve it.
+
+Remember the steps to solve:
+
+1. Understand the problem and what it’s asking.
+2. Identify your variables.
+3. Write down a system of equations that represent the problem.
+4. Solve the system of equations.
+
+",51.66666666666666,2
