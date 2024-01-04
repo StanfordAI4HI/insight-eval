@@ -30,7 +30,7 @@
 
     <script>
       const jsPsych = initJsPsych();
-      
+
       function parseCsv(csvText) {
         return new Promise((resolve, reject) => {
           Papa.parse(csvText, {
@@ -44,6 +44,7 @@
           });
         });
       }
+      
       // Function to fetch and parse CSV data
       async function fetchCsvData(url) {
         const response = await fetch(url);
@@ -79,41 +80,7 @@
             </div>`;
           document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
         });
-
-
-        function submitToProliferate() {
-          const surveyData = {
-            responses: jsPsych.data.get().json() // Collect all the response data
-          };
-          // Implement the submission logic to Proliferate
-          proliferate.submit(surveyData);
-
-          // Display a thank you message
-          document.body.innerHTML = '<p>Thank you for completing the survey!</p>';
-        }
       }
-    
-      setupExperiment();
-    </script>    
-    <!-- <script>
-      const jsPsych = initJsPsych();
-
-      const slider_trial = {
-        type: jsPsychHtmlSliderResponse,
-        stimulus: 'Please indicate your preference:',
-        labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
-        min: -1,
-        max: 1,
-        start: 0,
-        step: 0.01,
-        slider_width: 400
-      };
-
-      jsPsych.run([slider_trial]).then(() => {
-        // Experiment is finished, now show the submit button
-        const submitButtonHTML = '<button id="submit-btn" onclick="submitToProliferate()">Submit</button>';
-        document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
-      });
 
       function submitToProliferate() {
         const surveyData = {
@@ -125,7 +92,9 @@
         // Display a thank you message
         document.body.innerHTML = '<p>Thank you for completing the survey!</p>';
       }
-    </script> -->
+
+      setupExperiment();
+    </script>    
 
   </body>
 </html>
