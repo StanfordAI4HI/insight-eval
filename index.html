@@ -96,10 +96,17 @@
       }
 
       function submitToProliferate() {
+        const responses = jsPsych.data.get().values().map(response => ({
+          ...response,
+          index_A: response.index_A,
+          index_B: response.index_B
+        }));
+
         const surveyData = {
-          responses: jsPsych.data.get().json() // Collect all the response data
+          responses: JSON.stringify(responses) // Convert the responses to a JSON string
         };
-        // Implement the submission logic to Proliferate
+
+        // Submit the data to Proliferate
         proliferate.submit(surveyData);
 
         // Display a thank you message
