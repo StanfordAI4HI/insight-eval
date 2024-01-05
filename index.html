@@ -77,7 +77,7 @@
     
       // Function to create trials from CSV data
       function createTrialsFromCsvData(csvData) {
-        return csvData.map(row => ({
+        const trials = csvData.map(row => ({
           type: jsPsychHtmlSliderResponse,
           stimulus: `
             <div class="instructions-container">
@@ -99,6 +99,8 @@
           index_A: row.index_A,
           index_B: row.index_B
         }));
+        console.log(trials[0]);
+        return trials;
       }
     
       // Main experiment setup
@@ -118,7 +120,7 @@
       function submitToProliferate() {
         // Retrieve trial data including index_A and index_B
         const trialData = jsPsych.data.get().values();
-
+        console.log(trialData); 
         // Map each trial to include index_A and index_B in the response
         const responses = trialData.map(trial => {
           return {
