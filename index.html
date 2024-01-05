@@ -15,9 +15,6 @@
         bottom: 0;
       }
     
-      #submit-btn {
-        /* Add any additional styling you want for the button here */
-      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jspsych/jspsych.js"></script>
@@ -64,7 +61,9 @@
           max: 1,
           start: 0,
           step: 0.01,
-          slider_width: 400
+          slider_width: 400,
+          index_A: row.index_A,
+          index_B: row.index_B
         }));
       }
     
@@ -98,4 +97,3 @@
 
   </body>
 </html>
-
