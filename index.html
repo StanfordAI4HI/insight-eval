@@ -96,8 +96,10 @@
           start: 0,
           step: 0.01,
           slider_width: 400,
-          index_A: row.index_A,
-          index_B: row.index_B
+          data: {
+            index_A: row.index_A,
+            index_B: row.index_B
+          }
         }));
         console.log(results[0]);
         return results;
@@ -129,8 +131,8 @@
         const responses = trialData.map(trial => {
           return {
             ...trial, // includes all trial data
-            index_A: trial.index_A,
-            index_B: trial.index_B
+            index_A: trial.data.index_A,
+            index_B: trial.data.index_B
           };
         });
         console.log(responses);
