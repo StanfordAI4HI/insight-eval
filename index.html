@@ -120,7 +120,6 @@
       function submitToProliferate() {
         // Retrieve trial data including index_A and index_B
         const trialData = jsPsych.data.get().values();
-        console.log(trialData); 
         // Map each trial to include index_A and index_B in the response
         const responses = trialData.map(trial => {
           return {
@@ -129,7 +128,8 @@
             index_B: trial.index_B
           };
         });
-
+        console.log(responses);
+        
         const surveyData = {
           responses: JSON.stringify(responses) // Convert the responses to a JSON string
         };
