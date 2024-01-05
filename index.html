@@ -81,11 +81,11 @@
             <div class="instructions-container">
               <div class="instruction-box">
                 <label for="instruction-A">Instruction A</label>
-                <div class="instruction" id="instruction-A">${row.instruction_A}</div>
+                <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
               </div>
               <div class="instruction-box">
                 <label for="instruction-B">Instruction B</label>
-                <div class="instruction" id="instruction-B">${row.instruction_B}</div>
+                <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
               </div>
             </div>`,
           labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
@@ -114,11 +114,17 @@
       }
 
       function submitToProliferate() {
-        const responses = jsPsych.data.get().values().map(response => ({
-          ...response,
-          index_A: response.index_A,
-          index_B: response.index_B
-        }));
+        // Retrieve trial data including index_A and index_B
+        const trialData = jsPsych.data.get().values();
+
+        // Map each trial to include index_A and index_B in the response
+        const responses = trialData.map(trial => {
+          return {
+            ...trial, // includes all trial data
+            index_A: trial.index_A,
+            index_B: trial.index_B
+          };
+        });
 
         const surveyData = {
           responses: JSON.stringify(responses) // Convert the responses to a JSON string
