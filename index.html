@@ -14,7 +14,17 @@
         right: 0;
         bottom: 0;
       }
-    
+      
+      .instructions-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .instruction {
+        margin: 0 10px;
+        /* Add more styling as needed */
+      }    
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jspsych/jspsych.js"></script>
@@ -55,7 +65,11 @@
       function createTrialsFromCsvData(csvData) {
         return csvData.map(row => ({
           type: jsPsychHtmlSliderResponse,
-          stimulus: `A: ${row.instruction_A} <br> B: ${row.instruction_B}`,
+          stimulus: 
+            <div class="instructions-container">
+              <div class="instruction" id="instruction-A">${row.instruction_A}</div>
+              <div class="instruction" id="instruction-B">${row.instruction_B}</div>
+            </div>,
           labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
           min: -1,
           max: 1,
