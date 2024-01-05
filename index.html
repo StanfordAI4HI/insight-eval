@@ -14,7 +14,7 @@
         right: 0;
         bottom: 0;
       }
-      
+
       .instructions-container {
         display: flex;
         justify-content: space-around;
@@ -65,11 +65,11 @@
       function createTrialsFromCsvData(csvData) {
         return csvData.map(row => ({
           type: jsPsychHtmlSliderResponse,
-          stimulus: 
+          stimulus: `
             <div class="instructions-container">
               <div class="instruction" id="instruction-A">${row.instruction_A}</div>
               <div class="instruction" id="instruction-B">${row.instruction_B}</div>
-            </div>,
+            </div>`,
           labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
           min: -1,
           max: 1,
