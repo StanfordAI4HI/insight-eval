@@ -21,10 +21,22 @@
         align-items: center;
       }
 
+      .instruction-box {
+        border: 1px solid #ccc; /* Box border */
+        padding: 10px;
+        width: 48%; /* Adjust width as needed */
+        box-sizing: border-box;
+      }
+
       .instruction {
         margin: 0 10px;
-        /* Add more styling as needed */
-      }    
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }   
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jspsych/jspsych.js"></script>
@@ -67,8 +79,14 @@
           type: jsPsychHtmlSliderResponse,
           stimulus: `
             <div class="instructions-container">
-              <div class="instruction" id="instruction-A">${row.instruction_A}</div>
-              <div class="instruction" id="instruction-B">${row.instruction_B}</div>
+              <div class="instruction-box">
+                <label for="instruction-A">Instruction A</label>
+                <div class="instruction" id="instruction-A">${row.instruction_A}</div>
+              </div>
+              <div class="instruction-box">
+                <label for="instruction-B">Instruction B</label>
+                <div class="instruction" id="instruction-B">${row.instruction_B}</div>
+              </div>
             </div>`,
           labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
           min: -1,
