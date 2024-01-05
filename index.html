@@ -109,6 +109,7 @@
         const trials = createTrialsFromCsvData(csvData);
     
         jsPsych.run(trials).then(() => {
+          console.log("Trial data after experiment:", jsPsych.data.get().values());
           const submitButtonHTML = `
             <div id="submit-container">
               <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
