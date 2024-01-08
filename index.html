@@ -74,7 +74,16 @@
         const data = await parseCsv(csvText);
         return data;
       }
-    
+
+      function getRandomSubset(data, subsetSize) {
+        let shuffled = data.slice(); // Copy the array
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]; // Swap
+        }
+        return shuffled.slice(0, subsetSize); // Return the subset
+      }
+
       // Function to create trials from CSV data
       function createTrialsFromCsvData(csvData) {
         const results = csvData.map(row => ({
@@ -108,7 +117,9 @@
       // Main experiment setup
       async function setupExperiment() {
         const csvData = await fetchCsvData('worksheet_pairs_20240101_sample.csv');
-        const trials = createTrialsFromCsvData(csvData);
+        const subsetSize = 1;
+        const randomSubset = getRandomSubset(csvData, subsetSize);
+        const trials = createTrialsFromCsvData(randomSubset);
     
         jsPsych.run(trials).then(() => {
           console.log("Trial data after experiment:", jsPsych.data.get().values());
