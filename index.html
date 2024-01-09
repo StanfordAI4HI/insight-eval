@@ -90,12 +90,15 @@
           type: jsPsychHtmlSliderResponse,
           stimulus: `
             <div class="instructions-container">
+              <div style="text-align:center; margin-bottom: 20px;">
+                <strong>Which worksheet is more useful for the 8th-grade student (i.e., more likely to improve the student's test performance)? Note that the student does not get additional feedback or guidance other than what's on the worksheet.</strong><br>
+              </div>
               <div class="instruction-box">
-                <label for="instruction-A">Instruction A</label>
+                <label for="instruction-A">Worksheet A</label>
                 <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
               </div>
               <div class="instruction-box">
-                <label for="instruction-B">Instruction B</label>
+                <label for="instruction-B">Worksheet B</label>
                 <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
               </div>
             </div>`,
@@ -120,7 +123,20 @@
         const subsetSize = 1;
         const randomSubset = getRandomSubset(csvData, subsetSize);
         const trials = createTrialsFromCsvData(randomSubset);
-    
+ 
+        // Introduction trial
+        const introduction = {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: `
+                <div style="text-align:center; margin-bottom: 20px;">
+                    <h2>Introduction</h2>
+                    <p>Imagine an 8th-grade student who has been taught how to tackle math word problems in class but hasn't yet had the opportunity to practice them. This student is about to receive a worksheet to complete before an upcoming test. We will present you with pairs of these worksheets. Your task is to evaluate and compare how useful each worksheet would be for the student.</p>
+                </div>`,
+            choices: ['Begin']
+        };
+
+        trials.unshift(introduction);
+
         jsPsych.run(trials).then(() => {
           console.log("Trial data after experiment:", jsPsych.data.get().values());
           const submitButtonHTML = `
