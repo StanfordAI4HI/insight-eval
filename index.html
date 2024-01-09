@@ -90,17 +90,20 @@
         const results = csvData.map(row => ({
           type: jsPsychHtmlSliderResponse,
           stimulus: `
-            <div class="instructions-container">
-              <div style="text-align:center; margin-bottom: 20px;">
-                <strong>Which worksheet is more useful for the 8th-grade student (i.e., more likely to improve the student's test performance)? Note that the student does not get additional feedback or guidance other than what's on the worksheet.</strong><br>
+            <div class="content-container"> <!-- New container for the entire content -->
+              <div style="text-align: center; margin-bottom: 20px;"> <!-- Container for the text -->
+                <strong>Which worksheet is more useful for the 8th-grade student (i.e., more likely to improve the student's test performance)?</strong><br>
+                Note that the student does not get additional feedback or guidance other than what's on the worksheet.
               </div>
-              <div class="instruction-box">
-                <label for="instruction-A">Worksheet A</label>
-                <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
-              </div>
-              <div class="instruction-box">
-                <label for="instruction-B">Worksheet B</label>
-                <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
+              <div class="instructions-container"> <!-- Existing instructions container -->
+                <div class="instruction-box">
+                  <label for="instruction-A">Worksheet A</label>
+                  <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
+                </div>
+                <div class="instruction-box">
+                  <label for="instruction-B">Worksheet B</label>
+                  <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
+                </div>
               </div>
             </div>`,
           labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
