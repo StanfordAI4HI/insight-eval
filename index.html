@@ -122,8 +122,8 @@
     
       // Main experiment setup
       async function setupExperiment() {
-        const csvData = await fetchCsvData('worksheet_pairs_20240101_sample.csv');
-        const subsetSize = 1;
+        const csvData = await fetchCsvData('worksheet_pairs_20240108_three.csv');
+        const subsetSize = 3;
         const randomSubset = getRandomSubset(csvData, subsetSize);
         const trials = createTrialsFromCsvData(randomSubset);
  
