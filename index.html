@@ -177,7 +177,17 @@
         const subsetSize = 3;
         const randomSubset = getRandomSubset(csvData, subsetSize);
         const trials = createTrialsFromCsvData(randomSubset);
-        const catchTrial = createCatchTrial(catchData);
+
+        const catchTrialIndex = 3;
+        const redirectUrl = 'https://app.prolific.com/submissions/complete?cc=C151CMG4';
+        let catchTrial = createCatchTrial(catchData);
+        catchTrial.on_finish = function(data) {
+          // Check if the participant failed the catch trial
+          if (data.response >= -0.2) {
+            jsPsych.endExperiment('<p>Redirecting...</p>');
+            window.location.href = redirectUrl;
+          }
+        };        
  
         // Introduction trial
         const introduction = {
@@ -191,7 +201,7 @@
         };
         trials.unshift(introduction);
         trials.unshift(consentForm);
-        trials.splice(3, 0, catchTrial);
+        trials.splice(catchTrialIndex, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
           const submitButtonHTML = `
