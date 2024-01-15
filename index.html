@@ -153,10 +153,8 @@
                 </div>`,
             choices: ['Begin']
         };
-
-        trials.unshift(consentForm);
-        
         trials.unshift(introduction);
+        trials.unshift(consentForm);
 
         jsPsych.run(trials).then(() => {
           console.log("Trial data after experiment:", jsPsych.data.get().values());
