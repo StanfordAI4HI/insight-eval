@@ -184,6 +184,10 @@
         catchTrial.on_finish = function(data) {
           // Check if the participant failed the catch trial
           if (data.response >= -0.2) {
+            const submitBtn = document.getElementById('submit-btn');
+            if (submitBtn) {
+              submitBtn.style.display = 'none';
+            }
             jsPsych.endExperiment('<p>Redirecting...</p>');
             window.location.href = redirectUrl;
           }
