@@ -121,7 +121,21 @@
         console.log(results[0]);
         return results;
       }
-    
+ 
+      const consentForm = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+            <div style="text-align:center; margin-bottom: 20px;">
+                <h2>Consent Form</h2>
+                <p>Please read the following consent form carefully before proceeding.</p>
+                <div style="text-align:left; margin: 20px;">
+                  <!-- Add your consent form text here -->
+                  <p>[Consent form text goes here...]</p>
+                </div>
+            </div>`,
+        choices: ['I Agree']
+      };
+
       // Main experiment setup
       async function setupExperiment() {
         const csvData = await fetchCsvData('worksheet_pairs_20240108_three.csv');
@@ -140,6 +154,8 @@
             choices: ['Begin']
         };
 
+        trials.unshift(consentForm);
+        
         trials.unshift(introduction);
 
         jsPsych.run(trials).then(() => {
