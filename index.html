@@ -186,8 +186,8 @@
           // Check if the participant failed the catch trial
           if (data.response >= -0.2) {
             experimentEndedEarly = true;
-            jsPsych.endExperiment('<p>Redirecting...</p>');
             window.location.href = redirectUrl;
+            jsPsych.endExperiment('<p>Redirecting...</p>');
           }
         };        
  
