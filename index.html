@@ -118,8 +118,42 @@
             index_B: row.index_B
           }
         }));
-        console.log(results[0]);
         return results;
+      }
+
+      // Function to create a single catch trial
+      function createCatchTrial(csvData) {
+        // Assuming the catch trial csv has only one row
+        const row = csvData[0];
+        return {
+          type: jsPsychHtmlSliderResponse,
+          stimulus: `
+            <div class="content-container"> <!-- New container for the entire content -->
+              <div style="text-align: center; margin-bottom: 20px;"> <!-- Container for the text -->
+                <strong>Which worksheet would be more useful for the 8th-grade student in terms of improving their test performance? Please keep in mind that the student will not receive any extra feedback or guidance beyond what is provided in the worksheet itself.</strong><br>
+              </div>
+              <div class="instructions-container"> <!-- Existing instructions container -->
+                <div class="instruction-box">
+                  <label for="instruction-A">Worksheet A</label>
+                  <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
+                </div>
+                <div class="instruction-box">
+                  <label for="instruction-B">Worksheet B</label>
+                  <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
+                </div>
+              </div>
+            </div>`,
+          labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
+          min: -1,
+          max: 1,
+          start: 0,
+          step: 0.01,
+          slider_width: 400,
+          data: {
+            index_A: row.index_A,
+            index_B: row.index_B
+          }
+        };
       }
  
       const consentForm = {
@@ -139,9 +173,11 @@
       // Main experiment setup
       async function setupExperiment() {
         const csvData = await fetchCsvData('worksheet_pairs_20240108_three.csv');
+        const catchData = await fetchCsvData('catch_trial.csv');
         const subsetSize = 3;
         const randomSubset = getRandomSubset(csvData, subsetSize);
         const trials = createTrialsFromCsvData(randomSubset);
+        const catchTrial = createCatchTrial(catchData);
  
         // Introduction trial
         const introduction = {
@@ -155,9 +191,9 @@
         };
         trials.unshift(introduction);
         trials.unshift(consentForm);
+        trials.splice(1, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
-          console.log("Trial data after experiment:", jsPsych.data.get().values());
           const submitButtonHTML = `
             <div id="submit-container">
               <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
@@ -169,10 +205,7 @@
       function submitToProliferate() {
         // Retrieve trial data including index_A and index_B
         const trialData = jsPsych.data.get().values();
-        // Log each trial data to inspect
-        trialData.forEach((trial, index) => {
-          console.log(`Trial ${index}:`, trial);
-        });
+
         // Map each trial to include index_A and index_B in the response
         const responses = trialData.map(trial => {
           return {
@@ -181,7 +214,6 @@
             index_B: trial.index_B
           };
         });
-        console.log(responses);
 
         const surveyData = {
           responses: JSON.stringify(responses) // Convert the responses to a JSON string
