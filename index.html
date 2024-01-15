@@ -180,14 +180,12 @@
 
         const catchTrialIndex = 3;
         const redirectUrl = 'https://app.prolific.com/submissions/complete?cc=C151CMG4';
+        let experimentEndedEarly = false;
         let catchTrial = createCatchTrial(catchData);
         catchTrial.on_finish = function(data) {
           // Check if the participant failed the catch trial
           if (data.response >= -0.2) {
-            const submitBtn = document.getElementById('submit-btn');
-            if (submitBtn) {
-              submitBtn.style.display = 'none';
-            }
+            experimentEndedEarly = true;
             jsPsych.endExperiment('<p>Redirecting...</p>');
             window.location.href = redirectUrl;
           }
@@ -208,11 +206,13 @@
         trials.splice(catchTrialIndex, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
-          const submitButtonHTML = `
-            <div id="submit-container">
-              <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
-            </div>`;
-          document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
+          if (!experimentEndedEarly) {
+            const submitButtonHTML = `
+              <div id="submit-container">
+                <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
+              </div>`;
+            document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
+          }
         });
       }
 
