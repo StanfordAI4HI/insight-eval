@@ -191,7 +191,7 @@
         };
         trials.unshift(introduction);
         trials.unshift(consentForm);
-        trials.splice(1, 0, catchTrial);
+        trials.splice(3, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
           const submitButtonHTML = `
