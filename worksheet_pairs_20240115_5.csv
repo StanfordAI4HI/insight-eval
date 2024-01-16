@@ -1,0 +1,775 @@
+instruction_A,post_test_score_A,index_A,instruction_B,post_test_score_B,index_B
+"
+
+Title: Mastering Systems of Equations
+
+Let's delve into more elaborate examples to enhance your skills in setting up and solving systems of equations.
+
+Problem 1:
+A movie theater sells two types of tickets: adults and children. The price of an adult ticket is $15 and the price of a child ticket is $8. If the total income from the sale of tickets on a certain day was $1200 and a total of 100 tickets were sold, how many adult and children tickets were sold that day? 
+Remember the steps:
+ - Identify your variables.
+ - Write the system of equations based from the problem.
+ - Solve the system of equations. 
+
+Problem 2:
+In a class, there are twice as many girls as boys. If the total number of students in the class is 45, how many boys and girls are there in the class? Set up and solve a system of equations to answer the question.
+
+Problem 3:
+A birdwatcher saw a group of birds in a tree. She counted 16 bird heads and 40 bird legs. If there were only parrots and crows on the tree, with parrots having 2 legs and crows having 4, how many parrots and crows did the birdwatcher see?
+
+Problem 4:
+Tim and Jim are saving money. Tim saves $5 per day while Jim saves $7 per day. After some days, Tim noticed that the total amount of money saved by them is $240. If they saved the same number of days, how many days did it take them to save that amount and how much did each of them save?
+
+Remember the method:
+
+Step 1: Understand what's being asked in the problem.
+Step 2: Identify the unknowns and assign variables to them.
+Step 3: Write down a system of equations that represent the problem.
+Step 4: Solve the system of equations to find the solution.
+
+Practicing these problems will strengthen your skills in both setting up and solving systems of equations. Don't get discouraged if you have difficulties at first. Keep practicing, and you'll improve!
+
+",34.44444444444444,6,"
+
+Title: System of Equations Expert Breakdown
+
+Objective: Our aim in this worksheet is to help you become proficient with systems of equations, teaching you how to create and solve them starting with word problems.
+
+Problem 1:
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book costs $5, and each non-fiction book costs $7. If the bookstore sold 45 books and earned $250 in total, how many of each type of book did they sell?
+
+Guideline:
+Step 1: Let's represent the number of fiction books as 'F' and non-fiction books as 'NF'.
+Step 2: From the problem, we can derive two equations: 
+  a) F + NF = 45 (Because they sold 45 books in total).
+  b) 5F + 7NF = 250 (Since each fiction book costs $5 and each non-fiction $7, and the total is $250).
+Step 3: Solve these two equations to find out how many fiction and non-fiction books were sold.
+
+Problem 2:
+In a school, the number of 9th graders is 3 less than twice the number of 8th graders. If the total number of 8th and 9th graders is 105, how many 8th graders and how many 9th graders are there?
+
+Guideline:
+Step 1: Denote the number of 8th graders as '8G' and 9th graders as '9G'.
+Step 2: We can form our equations from the problem like this:
+    a) 8G + 9G = 105 (as combined they have 105 students).
+    b) 9G = 2*8G - 3 (Given that the number of 9th graders is three less than twice the number if 8th graders).
+Step 3: Try solving these two equations to find how many students are in each grade.
+
+Problem 3:
+A zoo has two kinds of birds, parrots and flamingos. Each parrot has 2 legs, and each flamingo has 2 legs. If there were 200 legs and 76 birds in total, how many parrots and flamingos are there?
+
+Guideline:
+Step 1: Let the number of parrots be 'P' and the number of flamingos be 'F'.
+Step 2: Set up the following equations based on the problem:
+a) P + F = 76 (since there are 76 birds in total).
+b) 2P + 2F = 200 (as both types of birds have 2 legs each, totalling 200 legs).
+Step 3: Solve these equations together to find the number of 'P' parrots and 'F' flamingos.
+
+Problem 4:
+Two friends, Lisa and Lana, decided to sell their old comic books. The number of comic books Lisa sold was 4 more than twice the number Lana sold. If they sold 58 comic books in total, how many comics books did each one sell?
+
+Guideline:
+Step 1: Let 'L' denote Lisa's comic books and 'La' denote Lana's.
+Step 2: Formulate two equations:
+- L + La = 58 (This represents the total number of comic books sold. )
+- L = 2La + 4 (This indicates that Lisa sold four more than twice the number of comic books Lana sold.) 
+Step 3: Solve these two equations to find out the number of comic books each person sold.
+
+Remember, practice and reviewing your solutions is crucial. Don't get disheartened if you don't solve it at first, it takes time. Keep at it!
+
+",58.888888888888886,17
+"
+
+Title: Mastering Systems of Equations
+
+Let's delve into more elaborate examples to enhance your skills in setting up and solving systems of equations.
+
+Problem 1:
+A movie theater sells two types of tickets: adults and children. The price of an adult ticket is $15 and the price of a child ticket is $8. If the total income from the sale of tickets on a certain day was $1200 and a total of 100 tickets were sold, how many adult and children tickets were sold that day? 
+Remember the steps:
+ - Identify your variables.
+ - Write the system of equations based from the problem.
+ - Solve the system of equations. 
+
+Problem 2:
+In a class, there are twice as many girls as boys. If the total number of students in the class is 45, how many boys and girls are there in the class? Set up and solve a system of equations to answer the question.
+
+Problem 3:
+A birdwatcher saw a group of birds in a tree. She counted 16 bird heads and 40 bird legs. If there were only parrots and crows on the tree, with parrots having 2 legs and crows having 4, how many parrots and crows did the birdwatcher see?
+
+Problem 4:
+Tim and Jim are saving money. Tim saves $5 per day while Jim saves $7 per day. After some days, Tim noticed that the total amount of money saved by them is $240. If they saved the same number of days, how many days did it take them to save that amount and how much did each of them save?
+
+Remember the method:
+
+Step 1: Understand what's being asked in the problem.
+Step 2: Identify the unknowns and assign variables to them.
+Step 3: Write down a system of equations that represent the problem.
+Step 4: Solve the system of equations to find the solution.
+
+Practicing these problems will strengthen your skills in both setting up and solving systems of equations. Don't get discouraged if you have difficulties at first. Keep practicing, and you'll improve!
+
+",34.44444444444444,6,"
+
+Title: Systems of Equations Master Class
+
+Objective: This worksheet aims to reinforce your understanding of constructing and solving systems of equations from given word problems. Each problem is carefully selected to cater to your learning journey, stepping up the challenge gradually. Keep practicing and soon, you'll ace it!
+
+Problem 1:
+In a game tournament, the number of players participating in chess is four more than twice the number of players participating in checkers. If the total number of players in the tournament is 56, can you find out the number of chess and checker players?
+
+Tips for Success:
+1. Let's denote the number of chess players as 'C' and checkers players as 'Ch'.
+2. From the information given, set up these equations: 'C + Ch = 56' and 'C = 2Ch + 4'.
+3. Solve these equations to determine the number of chess and checkers players.
+
+Problem 2:
+A fruit stand sells apples and oranges. Each apple costs $1 and each orange costs $3. If 35 fruits were sold for a total amount of $65, how many apples and oranges were sold?
+
+Tips for Success:
+1. Assign 'A' to represent the number of Apples and 'O' for Oranges.
+2. Formulate the equations from the given conditions: 'A + O = 35' and 'A + 3O = 65'.
+3. Solve these equations to find the number of Apples and Oranges sold.
+
+Problem 3:
+A music concert has solo performers and bands. The number of bands is 3 less than twice the number of solo performers. If there are a total of 27 performers, can you figure out the number of solo performers and bands?
+
+Tips for Success:
+1. Let 'S' denote Solo performers and 'B' denote Bands.
+2. From the details of the problem, formulate these equations: 'S + B = 27' and 'B = 2S - 3'.
+3. Solve these equations to discover the number of solo performers and bands.
+
+Problem 4:
+A coffee shop sells two types of coffee mugs - small mugs for $5 and large mugs for $10. If the total sales from 120 mugs were $800, how many small and large mugs were sold?
+
+Tips for Success:
+1. Assign 'S' for the number of small mugs and 'L' for large mugs.
+2. From the problem, form these equations: 'S + L = 120' and '5S + 10L = 800'.
+3. Solve these equations to find out the number of small and large mugs sold.
+
+Remember to trust your abilities and be patient with your learning progress. It's okay to make mistakes; they're part of the learning process. With every problem you solve, you're one step closer to being a master in setting up and solving systems of equations. You can do this!
+
+",67.22222222222223,48
+"
+
+Title: Mastering Systems of Equations
+
+Let's delve into more elaborate examples to enhance your skills in setting up and solving systems of equations.
+
+Problem 1:
+A movie theater sells two types of tickets: adults and children. The price of an adult ticket is $15 and the price of a child ticket is $8. If the total income from the sale of tickets on a certain day was $1200 and a total of 100 tickets were sold, how many adult and children tickets were sold that day? 
+Remember the steps:
+ - Identify your variables.
+ - Write the system of equations based from the problem.
+ - Solve the system of equations. 
+
+Problem 2:
+In a class, there are twice as many girls as boys. If the total number of students in the class is 45, how many boys and girls are there in the class? Set up and solve a system of equations to answer the question.
+
+Problem 3:
+A birdwatcher saw a group of birds in a tree. She counted 16 bird heads and 40 bird legs. If there were only parrots and crows on the tree, with parrots having 2 legs and crows having 4, how many parrots and crows did the birdwatcher see?
+
+Problem 4:
+Tim and Jim are saving money. Tim saves $5 per day while Jim saves $7 per day. After some days, Tim noticed that the total amount of money saved by them is $240. If they saved the same number of days, how many days did it take them to save that amount and how much did each of them save?
+
+Remember the method:
+
+Step 1: Understand what's being asked in the problem.
+Step 2: Identify the unknowns and assign variables to them.
+Step 3: Write down a system of equations that represent the problem.
+Step 4: Solve the system of equations to find the solution.
+
+Practicing these problems will strengthen your skills in both setting up and solving systems of equations. Don't get discouraged if you have difficulties at first. Keep practicing, and you'll improve!
+
+",34.44444444444444,6,"
+
+Title: ""Excellence in Equations""
+
+Objective: This worksheet aims to boost your abilities in setting up and solving systems of equations from word problems. The selected problems involve a myriad of daily-life scenarios to make the learning process intriguing and relatable.
+
+Problem 1: 
+In a park, the number of birds is four more than three times the number of squirrels. If there are 64 animals in total, how many birds and squirrels wander in the park?
+
+Quick guides:
+1. We’ll denote ‘B' for birds and ‘S' for squirrels. 
+2. From the given problem, form the following equations, ‘B + S = 64’ and ‘B = 3S + 4’.
+3. Applying an appropriate method, solve these equations to find the number of birds and squirrels.
+
+Problem 2: 
+A cafe sells two types of beverages - coffee and tea. Each coffee is sold for $4 and tea for $3. If total sales from 48 beverages were $172, determine how many cups of coffee and tea were sold? 
+
+Quick guides:
+1. Let's denote the number of coffees as 'C' and teas as 'T'.
+2. From the details provided, we can form these equations: 'C + T = 48' and '4C + 3T = 172'.
+3. Solve these equations to figure out the number of coffees and teas sold.
+
+Problem 3: 
+In a forest, there are rabbits and deers. The number of rabbits is 7 less than twice the number of deers. If there are 45 animals in total, how many rabbits and deers are in the forest?
+
+Quick guides:
+1. Let’s denote ‘R’ for rabbits and ‘D’ for deers.
+2. According to the problem, we can form these equations: 'R + D = 45' and 'R = 2D - 7'.
+3. Solve these equations to find the number of rabbits and deers.
+
+Problem 4: 
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book is sold for $6, and non-fiction books are sold for $8. If total sales from 26 books were $172, how many fiction and non-fiction books were sold?
+
+Quick guides:
+1. Let's assign 'F' to represent Fiction books and 'N' for Non-fiction books.
+2. From the provided scenario, develop these equations: 'F + N = 26' and '6F + 8N = 172'.
+3. Apply an appropriate method and solve these equations to find the number of fiction and non-fiction books sold.
+
+Remember, setting up and solving a system of equations involves understanding the problem, identifying the variables and equations, and applying a suitable method to find the solution. Having a structured approach and practicing consistently will make you an expert in no time.
+
+",74.44444444444444,50
+"
+
+Title: Mastering Systems of Equations
+
+Let's delve into more elaborate examples to enhance your skills in setting up and solving systems of equations.
+
+Problem 1:
+A movie theater sells two types of tickets: adults and children. The price of an adult ticket is $15 and the price of a child ticket is $8. If the total income from the sale of tickets on a certain day was $1200 and a total of 100 tickets were sold, how many adult and children tickets were sold that day? 
+Remember the steps:
+ - Identify your variables.
+ - Write the system of equations based from the problem.
+ - Solve the system of equations. 
+
+Problem 2:
+In a class, there are twice as many girls as boys. If the total number of students in the class is 45, how many boys and girls are there in the class? Set up and solve a system of equations to answer the question.
+
+Problem 3:
+A birdwatcher saw a group of birds in a tree. She counted 16 bird heads and 40 bird legs. If there were only parrots and crows on the tree, with parrots having 2 legs and crows having 4, how many parrots and crows did the birdwatcher see?
+
+Problem 4:
+Tim and Jim are saving money. Tim saves $5 per day while Jim saves $7 per day. After some days, Tim noticed that the total amount of money saved by them is $240. If they saved the same number of days, how many days did it take them to save that amount and how much did each of them save?
+
+Remember the method:
+
+Step 1: Understand what's being asked in the problem.
+Step 2: Identify the unknowns and assign variables to them.
+Step 3: Write down a system of equations that represent the problem.
+Step 4: Solve the system of equations to find the solution.
+
+Practicing these problems will strengthen your skills in both setting up and solving systems of equations. Don't get discouraged if you have difficulties at first. Keep practicing, and you'll improve!
+
+",34.44444444444444,6,"
+
+Title: Equation Excellence - Mastering Systems of Equations
+
+Objective: Your journey to master the art of translating word problems into systems of equations and solve them confidently is about to level up. Dive into these hand-picked problems to hone your skills.
+
+Problem 1:
+In a zoo, there are giraffes and zebras. The number of giraffes is two more than three times the number of zebras. If there are 29 animals in total, how many giraffes and zebras are there in the zoo?
+
+Hints for Success:
+1. Assign 'G' to represent Giraffes and 'Z' for Zebras.
+2. Derive the equations from the problem: 'G + Z = 29' and 'G = 3Z + 2'.
+3. Solve these equations to find the number of giraffes and zebras.
+
+Problem 2:
+A magic show sells two types of tickets - regular seats for $2 and VIP seats for $5. If the total sales from 30 tickets were $80, can you figure out how many regular and VIP seats were sold?
+
+Hints for Success:
+1. Let's denote the number of regular seats as 'R' and VIP seats as 'V'.
+2. From the conditions given in the problem, form these equations: 'R + V = 30' and '2R + 5V = 80'.
+3. Solve these equations to find the number of regular and VIP seats sold.
+
+Problem 3:
+In a garden, the number of daffodils is 6 less than twice the number of tulips. Altogether, there are 26 flowers in the garden. How many daffodils and tulips are in the garden?
+
+Hints for Success:
+1. Let 'D' represent Daffodils and 'T' represent Tulips.
+2. According to the problem, we can formulate these equations: 'D + T = 26' and 'D = 2T - 6'.
+3. Solve these equations to uncover the number of daffodils and tulips.
+
+Remember that every problem is a stepping stone to do better. Embrace challenges and use the provided hints to reinforce the process of setting up and solving systems of equations. Enjoy your journey to becoming an expert!
+
+",86.66666666666667,42
+"
+
+Title: System of Equations Expert Breakdown
+
+Objective: Our aim in this worksheet is to help you become proficient with systems of equations, teaching you how to create and solve them starting with word problems.
+
+Problem 1:
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book costs $5, and each non-fiction book costs $7. If the bookstore sold 45 books and earned $250 in total, how many of each type of book did they sell?
+
+Guideline:
+Step 1: Let's represent the number of fiction books as 'F' and non-fiction books as 'NF'.
+Step 2: From the problem, we can derive two equations: 
+  a) F + NF = 45 (Because they sold 45 books in total).
+  b) 5F + 7NF = 250 (Since each fiction book costs $5 and each non-fiction $7, and the total is $250).
+Step 3: Solve these two equations to find out how many fiction and non-fiction books were sold.
+
+Problem 2:
+In a school, the number of 9th graders is 3 less than twice the number of 8th graders. If the total number of 8th and 9th graders is 105, how many 8th graders and how many 9th graders are there?
+
+Guideline:
+Step 1: Denote the number of 8th graders as '8G' and 9th graders as '9G'.
+Step 2: We can form our equations from the problem like this:
+    a) 8G + 9G = 105 (as combined they have 105 students).
+    b) 9G = 2*8G - 3 (Given that the number of 9th graders is three less than twice the number if 8th graders).
+Step 3: Try solving these two equations to find how many students are in each grade.
+
+Problem 3:
+A zoo has two kinds of birds, parrots and flamingos. Each parrot has 2 legs, and each flamingo has 2 legs. If there were 200 legs and 76 birds in total, how many parrots and flamingos are there?
+
+Guideline:
+Step 1: Let the number of parrots be 'P' and the number of flamingos be 'F'.
+Step 2: Set up the following equations based on the problem:
+a) P + F = 76 (since there are 76 birds in total).
+b) 2P + 2F = 200 (as both types of birds have 2 legs each, totalling 200 legs).
+Step 3: Solve these equations together to find the number of 'P' parrots and 'F' flamingos.
+
+Problem 4:
+Two friends, Lisa and Lana, decided to sell their old comic books. The number of comic books Lisa sold was 4 more than twice the number Lana sold. If they sold 58 comic books in total, how many comics books did each one sell?
+
+Guideline:
+Step 1: Let 'L' denote Lisa's comic books and 'La' denote Lana's.
+Step 2: Formulate two equations:
+- L + La = 58 (This represents the total number of comic books sold. )
+- L = 2La + 4 (This indicates that Lisa sold four more than twice the number of comic books Lana sold.) 
+Step 3: Solve these two equations to find out the number of comic books each person sold.
+
+Remember, practice and reviewing your solutions is crucial. Don't get disheartened if you don't solve it at first, it takes time. Keep at it!
+
+",58.888888888888886,17,"
+
+Title: Systems of Equations Master Class
+
+Objective: This worksheet aims to reinforce your understanding of constructing and solving systems of equations from given word problems. Each problem is carefully selected to cater to your learning journey, stepping up the challenge gradually. Keep practicing and soon, you'll ace it!
+
+Problem 1:
+In a game tournament, the number of players participating in chess is four more than twice the number of players participating in checkers. If the total number of players in the tournament is 56, can you find out the number of chess and checker players?
+
+Tips for Success:
+1. Let's denote the number of chess players as 'C' and checkers players as 'Ch'.
+2. From the information given, set up these equations: 'C + Ch = 56' and 'C = 2Ch + 4'.
+3. Solve these equations to determine the number of chess and checkers players.
+
+Problem 2:
+A fruit stand sells apples and oranges. Each apple costs $1 and each orange costs $3. If 35 fruits were sold for a total amount of $65, how many apples and oranges were sold?
+
+Tips for Success:
+1. Assign 'A' to represent the number of Apples and 'O' for Oranges.
+2. Formulate the equations from the given conditions: 'A + O = 35' and 'A + 3O = 65'.
+3. Solve these equations to find the number of Apples and Oranges sold.
+
+Problem 3:
+A music concert has solo performers and bands. The number of bands is 3 less than twice the number of solo performers. If there are a total of 27 performers, can you figure out the number of solo performers and bands?
+
+Tips for Success:
+1. Let 'S' denote Solo performers and 'B' denote Bands.
+2. From the details of the problem, formulate these equations: 'S + B = 27' and 'B = 2S - 3'.
+3. Solve these equations to discover the number of solo performers and bands.
+
+Problem 4:
+A coffee shop sells two types of coffee mugs - small mugs for $5 and large mugs for $10. If the total sales from 120 mugs were $800, how many small and large mugs were sold?
+
+Tips for Success:
+1. Assign 'S' for the number of small mugs and 'L' for large mugs.
+2. From the problem, form these equations: 'S + L = 120' and '5S + 10L = 800'.
+3. Solve these equations to find out the number of small and large mugs sold.
+
+Remember to trust your abilities and be patient with your learning progress. It's okay to make mistakes; they're part of the learning process. With every problem you solve, you're one step closer to being a master in setting up and solving systems of equations. You can do this!
+
+",67.22222222222223,48
+"
+
+Title: System of Equations Expert Breakdown
+
+Objective: Our aim in this worksheet is to help you become proficient with systems of equations, teaching you how to create and solve them starting with word problems.
+
+Problem 1:
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book costs $5, and each non-fiction book costs $7. If the bookstore sold 45 books and earned $250 in total, how many of each type of book did they sell?
+
+Guideline:
+Step 1: Let's represent the number of fiction books as 'F' and non-fiction books as 'NF'.
+Step 2: From the problem, we can derive two equations: 
+  a) F + NF = 45 (Because they sold 45 books in total).
+  b) 5F + 7NF = 250 (Since each fiction book costs $5 and each non-fiction $7, and the total is $250).
+Step 3: Solve these two equations to find out how many fiction and non-fiction books were sold.
+
+Problem 2:
+In a school, the number of 9th graders is 3 less than twice the number of 8th graders. If the total number of 8th and 9th graders is 105, how many 8th graders and how many 9th graders are there?
+
+Guideline:
+Step 1: Denote the number of 8th graders as '8G' and 9th graders as '9G'.
+Step 2: We can form our equations from the problem like this:
+    a) 8G + 9G = 105 (as combined they have 105 students).
+    b) 9G = 2*8G - 3 (Given that the number of 9th graders is three less than twice the number if 8th graders).
+Step 3: Try solving these two equations to find how many students are in each grade.
+
+Problem 3:
+A zoo has two kinds of birds, parrots and flamingos. Each parrot has 2 legs, and each flamingo has 2 legs. If there were 200 legs and 76 birds in total, how many parrots and flamingos are there?
+
+Guideline:
+Step 1: Let the number of parrots be 'P' and the number of flamingos be 'F'.
+Step 2: Set up the following equations based on the problem:
+a) P + F = 76 (since there are 76 birds in total).
+b) 2P + 2F = 200 (as both types of birds have 2 legs each, totalling 200 legs).
+Step 3: Solve these equations together to find the number of 'P' parrots and 'F' flamingos.
+
+Problem 4:
+Two friends, Lisa and Lana, decided to sell their old comic books. The number of comic books Lisa sold was 4 more than twice the number Lana sold. If they sold 58 comic books in total, how many comics books did each one sell?
+
+Guideline:
+Step 1: Let 'L' denote Lisa's comic books and 'La' denote Lana's.
+Step 2: Formulate two equations:
+- L + La = 58 (This represents the total number of comic books sold. )
+- L = 2La + 4 (This indicates that Lisa sold four more than twice the number of comic books Lana sold.) 
+Step 3: Solve these two equations to find out the number of comic books each person sold.
+
+Remember, practice and reviewing your solutions is crucial. Don't get disheartened if you don't solve it at first, it takes time. Keep at it!
+
+",58.888888888888886,17,"
+
+Title: ""Excellence in Equations""
+
+Objective: This worksheet aims to boost your abilities in setting up and solving systems of equations from word problems. The selected problems involve a myriad of daily-life scenarios to make the learning process intriguing and relatable.
+
+Problem 1: 
+In a park, the number of birds is four more than three times the number of squirrels. If there are 64 animals in total, how many birds and squirrels wander in the park?
+
+Quick guides:
+1. We’ll denote ‘B' for birds and ‘S' for squirrels. 
+2. From the given problem, form the following equations, ‘B + S = 64’ and ‘B = 3S + 4’.
+3. Applying an appropriate method, solve these equations to find the number of birds and squirrels.
+
+Problem 2: 
+A cafe sells two types of beverages - coffee and tea. Each coffee is sold for $4 and tea for $3. If total sales from 48 beverages were $172, determine how many cups of coffee and tea were sold? 
+
+Quick guides:
+1. Let's denote the number of coffees as 'C' and teas as 'T'.
+2. From the details provided, we can form these equations: 'C + T = 48' and '4C + 3T = 172'.
+3. Solve these equations to figure out the number of coffees and teas sold.
+
+Problem 3: 
+In a forest, there are rabbits and deers. The number of rabbits is 7 less than twice the number of deers. If there are 45 animals in total, how many rabbits and deers are in the forest?
+
+Quick guides:
+1. Let’s denote ‘R’ for rabbits and ‘D’ for deers.
+2. According to the problem, we can form these equations: 'R + D = 45' and 'R = 2D - 7'.
+3. Solve these equations to find the number of rabbits and deers.
+
+Problem 4: 
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book is sold for $6, and non-fiction books are sold for $8. If total sales from 26 books were $172, how many fiction and non-fiction books were sold?
+
+Quick guides:
+1. Let's assign 'F' to represent Fiction books and 'N' for Non-fiction books.
+2. From the provided scenario, develop these equations: 'F + N = 26' and '6F + 8N = 172'.
+3. Apply an appropriate method and solve these equations to find the number of fiction and non-fiction books sold.
+
+Remember, setting up and solving a system of equations involves understanding the problem, identifying the variables and equations, and applying a suitable method to find the solution. Having a structured approach and practicing consistently will make you an expert in no time.
+
+",74.44444444444444,50
+"
+
+Title: System of Equations Expert Breakdown
+
+Objective: Our aim in this worksheet is to help you become proficient with systems of equations, teaching you how to create and solve them starting with word problems.
+
+Problem 1:
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book costs $5, and each non-fiction book costs $7. If the bookstore sold 45 books and earned $250 in total, how many of each type of book did they sell?
+
+Guideline:
+Step 1: Let's represent the number of fiction books as 'F' and non-fiction books as 'NF'.
+Step 2: From the problem, we can derive two equations: 
+  a) F + NF = 45 (Because they sold 45 books in total).
+  b) 5F + 7NF = 250 (Since each fiction book costs $5 and each non-fiction $7, and the total is $250).
+Step 3: Solve these two equations to find out how many fiction and non-fiction books were sold.
+
+Problem 2:
+In a school, the number of 9th graders is 3 less than twice the number of 8th graders. If the total number of 8th and 9th graders is 105, how many 8th graders and how many 9th graders are there?
+
+Guideline:
+Step 1: Denote the number of 8th graders as '8G' and 9th graders as '9G'.
+Step 2: We can form our equations from the problem like this:
+    a) 8G + 9G = 105 (as combined they have 105 students).
+    b) 9G = 2*8G - 3 (Given that the number of 9th graders is three less than twice the number if 8th graders).
+Step 3: Try solving these two equations to find how many students are in each grade.
+
+Problem 3:
+A zoo has two kinds of birds, parrots and flamingos. Each parrot has 2 legs, and each flamingo has 2 legs. If there were 200 legs and 76 birds in total, how many parrots and flamingos are there?
+
+Guideline:
+Step 1: Let the number of parrots be 'P' and the number of flamingos be 'F'.
+Step 2: Set up the following equations based on the problem:
+a) P + F = 76 (since there are 76 birds in total).
+b) 2P + 2F = 200 (as both types of birds have 2 legs each, totalling 200 legs).
+Step 3: Solve these equations together to find the number of 'P' parrots and 'F' flamingos.
+
+Problem 4:
+Two friends, Lisa and Lana, decided to sell their old comic books. The number of comic books Lisa sold was 4 more than twice the number Lana sold. If they sold 58 comic books in total, how many comics books did each one sell?
+
+Guideline:
+Step 1: Let 'L' denote Lisa's comic books and 'La' denote Lana's.
+Step 2: Formulate two equations:
+- L + La = 58 (This represents the total number of comic books sold. )
+- L = 2La + 4 (This indicates that Lisa sold four more than twice the number of comic books Lana sold.) 
+Step 3: Solve these two equations to find out the number of comic books each person sold.
+
+Remember, practice and reviewing your solutions is crucial. Don't get disheartened if you don't solve it at first, it takes time. Keep at it!
+
+",58.888888888888886,17,"
+
+Title: Equation Excellence - Mastering Systems of Equations
+
+Objective: Your journey to master the art of translating word problems into systems of equations and solve them confidently is about to level up. Dive into these hand-picked problems to hone your skills.
+
+Problem 1:
+In a zoo, there are giraffes and zebras. The number of giraffes is two more than three times the number of zebras. If there are 29 animals in total, how many giraffes and zebras are there in the zoo?
+
+Hints for Success:
+1. Assign 'G' to represent Giraffes and 'Z' for Zebras.
+2. Derive the equations from the problem: 'G + Z = 29' and 'G = 3Z + 2'.
+3. Solve these equations to find the number of giraffes and zebras.
+
+Problem 2:
+A magic show sells two types of tickets - regular seats for $2 and VIP seats for $5. If the total sales from 30 tickets were $80, can you figure out how many regular and VIP seats were sold?
+
+Hints for Success:
+1. Let's denote the number of regular seats as 'R' and VIP seats as 'V'.
+2. From the conditions given in the problem, form these equations: 'R + V = 30' and '2R + 5V = 80'.
+3. Solve these equations to find the number of regular and VIP seats sold.
+
+Problem 3:
+In a garden, the number of daffodils is 6 less than twice the number of tulips. Altogether, there are 26 flowers in the garden. How many daffodils and tulips are in the garden?
+
+Hints for Success:
+1. Let 'D' represent Daffodils and 'T' represent Tulips.
+2. According to the problem, we can formulate these equations: 'D + T = 26' and 'D = 2T - 6'.
+3. Solve these equations to uncover the number of daffodils and tulips.
+
+Remember that every problem is a stepping stone to do better. Embrace challenges and use the provided hints to reinforce the process of setting up and solving systems of equations. Enjoy your journey to becoming an expert!
+
+",86.66666666666667,42
+"
+
+Title: Systems of Equations Master Class
+
+Objective: This worksheet aims to reinforce your understanding of constructing and solving systems of equations from given word problems. Each problem is carefully selected to cater to your learning journey, stepping up the challenge gradually. Keep practicing and soon, you'll ace it!
+
+Problem 1:
+In a game tournament, the number of players participating in chess is four more than twice the number of players participating in checkers. If the total number of players in the tournament is 56, can you find out the number of chess and checker players?
+
+Tips for Success:
+1. Let's denote the number of chess players as 'C' and checkers players as 'Ch'.
+2. From the information given, set up these equations: 'C + Ch = 56' and 'C = 2Ch + 4'.
+3. Solve these equations to determine the number of chess and checkers players.
+
+Problem 2:
+A fruit stand sells apples and oranges. Each apple costs $1 and each orange costs $3. If 35 fruits were sold for a total amount of $65, how many apples and oranges were sold?
+
+Tips for Success:
+1. Assign 'A' to represent the number of Apples and 'O' for Oranges.
+2. Formulate the equations from the given conditions: 'A + O = 35' and 'A + 3O = 65'.
+3. Solve these equations to find the number of Apples and Oranges sold.
+
+Problem 3:
+A music concert has solo performers and bands. The number of bands is 3 less than twice the number of solo performers. If there are a total of 27 performers, can you figure out the number of solo performers and bands?
+
+Tips for Success:
+1. Let 'S' denote Solo performers and 'B' denote Bands.
+2. From the details of the problem, formulate these equations: 'S + B = 27' and 'B = 2S - 3'.
+3. Solve these equations to discover the number of solo performers and bands.
+
+Problem 4:
+A coffee shop sells two types of coffee mugs - small mugs for $5 and large mugs for $10. If the total sales from 120 mugs were $800, how many small and large mugs were sold?
+
+Tips for Success:
+1. Assign 'S' for the number of small mugs and 'L' for large mugs.
+2. From the problem, form these equations: 'S + L = 120' and '5S + 10L = 800'.
+3. Solve these equations to find out the number of small and large mugs sold.
+
+Remember to trust your abilities and be patient with your learning progress. It's okay to make mistakes; they're part of the learning process. With every problem you solve, you're one step closer to being a master in setting up and solving systems of equations. You can do this!
+
+",67.22222222222223,48,"
+
+Title: ""Excellence in Equations""
+
+Objective: This worksheet aims to boost your abilities in setting up and solving systems of equations from word problems. The selected problems involve a myriad of daily-life scenarios to make the learning process intriguing and relatable.
+
+Problem 1: 
+In a park, the number of birds is four more than three times the number of squirrels. If there are 64 animals in total, how many birds and squirrels wander in the park?
+
+Quick guides:
+1. We’ll denote ‘B' for birds and ‘S' for squirrels. 
+2. From the given problem, form the following equations, ‘B + S = 64’ and ‘B = 3S + 4’.
+3. Applying an appropriate method, solve these equations to find the number of birds and squirrels.
+
+Problem 2: 
+A cafe sells two types of beverages - coffee and tea. Each coffee is sold for $4 and tea for $3. If total sales from 48 beverages were $172, determine how many cups of coffee and tea were sold? 
+
+Quick guides:
+1. Let's denote the number of coffees as 'C' and teas as 'T'.
+2. From the details provided, we can form these equations: 'C + T = 48' and '4C + 3T = 172'.
+3. Solve these equations to figure out the number of coffees and teas sold.
+
+Problem 3: 
+In a forest, there are rabbits and deers. The number of rabbits is 7 less than twice the number of deers. If there are 45 animals in total, how many rabbits and deers are in the forest?
+
+Quick guides:
+1. Let’s denote ‘R’ for rabbits and ‘D’ for deers.
+2. According to the problem, we can form these equations: 'R + D = 45' and 'R = 2D - 7'.
+3. Solve these equations to find the number of rabbits and deers.
+
+Problem 4: 
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book is sold for $6, and non-fiction books are sold for $8. If total sales from 26 books were $172, how many fiction and non-fiction books were sold?
+
+Quick guides:
+1. Let's assign 'F' to represent Fiction books and 'N' for Non-fiction books.
+2. From the provided scenario, develop these equations: 'F + N = 26' and '6F + 8N = 172'.
+3. Apply an appropriate method and solve these equations to find the number of fiction and non-fiction books sold.
+
+Remember, setting up and solving a system of equations involves understanding the problem, identifying the variables and equations, and applying a suitable method to find the solution. Having a structured approach and practicing consistently will make you an expert in no time.
+
+",74.44444444444444,50
+"
+
+Title: Equation Excellence - Mastering Systems of Equations
+
+Objective: Your journey to master the art of translating word problems into systems of equations and solve them confidently is about to level up. Dive into these hand-picked problems to hone your skills.
+
+Problem 1:
+In a zoo, there are giraffes and zebras. The number of giraffes is two more than three times the number of zebras. If there are 29 animals in total, how many giraffes and zebras are there in the zoo?
+
+Hints for Success:
+1. Assign 'G' to represent Giraffes and 'Z' for Zebras.
+2. Derive the equations from the problem: 'G + Z = 29' and 'G = 3Z + 2'.
+3. Solve these equations to find the number of giraffes and zebras.
+
+Problem 2:
+A magic show sells two types of tickets - regular seats for $2 and VIP seats for $5. If the total sales from 30 tickets were $80, can you figure out how many regular and VIP seats were sold?
+
+Hints for Success:
+1. Let's denote the number of regular seats as 'R' and VIP seats as 'V'.
+2. From the conditions given in the problem, form these equations: 'R + V = 30' and '2R + 5V = 80'.
+3. Solve these equations to find the number of regular and VIP seats sold.
+
+Problem 3:
+In a garden, the number of daffodils is 6 less than twice the number of tulips. Altogether, there are 26 flowers in the garden. How many daffodils and tulips are in the garden?
+
+Hints for Success:
+1. Let 'D' represent Daffodils and 'T' represent Tulips.
+2. According to the problem, we can formulate these equations: 'D + T = 26' and 'D = 2T - 6'.
+3. Solve these equations to uncover the number of daffodils and tulips.
+
+Remember that every problem is a stepping stone to do better. Embrace challenges and use the provided hints to reinforce the process of setting up and solving systems of equations. Enjoy your journey to becoming an expert!
+
+",86.66666666666667,42,"
+
+Title: Systems of Equations Master Class
+
+Objective: This worksheet aims to reinforce your understanding of constructing and solving systems of equations from given word problems. Each problem is carefully selected to cater to your learning journey, stepping up the challenge gradually. Keep practicing and soon, you'll ace it!
+
+Problem 1:
+In a game tournament, the number of players participating in chess is four more than twice the number of players participating in checkers. If the total number of players in the tournament is 56, can you find out the number of chess and checker players?
+
+Tips for Success:
+1. Let's denote the number of chess players as 'C' and checkers players as 'Ch'.
+2. From the information given, set up these equations: 'C + Ch = 56' and 'C = 2Ch + 4'.
+3. Solve these equations to determine the number of chess and checkers players.
+
+Problem 2:
+A fruit stand sells apples and oranges. Each apple costs $1 and each orange costs $3. If 35 fruits were sold for a total amount of $65, how many apples and oranges were sold?
+
+Tips for Success:
+1. Assign 'A' to represent the number of Apples and 'O' for Oranges.
+2. Formulate the equations from the given conditions: 'A + O = 35' and 'A + 3O = 65'.
+3. Solve these equations to find the number of Apples and Oranges sold.
+
+Problem 3:
+A music concert has solo performers and bands. The number of bands is 3 less than twice the number of solo performers. If there are a total of 27 performers, can you figure out the number of solo performers and bands?
+
+Tips for Success:
+1. Let 'S' denote Solo performers and 'B' denote Bands.
+2. From the details of the problem, formulate these equations: 'S + B = 27' and 'B = 2S - 3'.
+3. Solve these equations to discover the number of solo performers and bands.
+
+Problem 4:
+A coffee shop sells two types of coffee mugs - small mugs for $5 and large mugs for $10. If the total sales from 120 mugs were $800, how many small and large mugs were sold?
+
+Tips for Success:
+1. Assign 'S' for the number of small mugs and 'L' for large mugs.
+2. From the problem, form these equations: 'S + L = 120' and '5S + 10L = 800'.
+3. Solve these equations to find out the number of small and large mugs sold.
+
+Remember to trust your abilities and be patient with your learning progress. It's okay to make mistakes; they're part of the learning process. With every problem you solve, you're one step closer to being a master in setting up and solving systems of equations. You can do this!
+
+",67.22222222222223,48
+"
+
+Title: Equation Excellence - Mastering Systems of Equations
+
+Objective: Your journey to master the art of translating word problems into systems of equations and solve them confidently is about to level up. Dive into these hand-picked problems to hone your skills.
+
+Problem 1:
+In a zoo, there are giraffes and zebras. The number of giraffes is two more than three times the number of zebras. If there are 29 animals in total, how many giraffes and zebras are there in the zoo?
+
+Hints for Success:
+1. Assign 'G' to represent Giraffes and 'Z' for Zebras.
+2. Derive the equations from the problem: 'G + Z = 29' and 'G = 3Z + 2'.
+3. Solve these equations to find the number of giraffes and zebras.
+
+Problem 2:
+A magic show sells two types of tickets - regular seats for $2 and VIP seats for $5. If the total sales from 30 tickets were $80, can you figure out how many regular and VIP seats were sold?
+
+Hints for Success:
+1. Let's denote the number of regular seats as 'R' and VIP seats as 'V'.
+2. From the conditions given in the problem, form these equations: 'R + V = 30' and '2R + 5V = 80'.
+3. Solve these equations to find the number of regular and VIP seats sold.
+
+Problem 3:
+In a garden, the number of daffodils is 6 less than twice the number of tulips. Altogether, there are 26 flowers in the garden. How many daffodils and tulips are in the garden?
+
+Hints for Success:
+1. Let 'D' represent Daffodils and 'T' represent Tulips.
+2. According to the problem, we can formulate these equations: 'D + T = 26' and 'D = 2T - 6'.
+3. Solve these equations to uncover the number of daffodils and tulips.
+
+Remember that every problem is a stepping stone to do better. Embrace challenges and use the provided hints to reinforce the process of setting up and solving systems of equations. Enjoy your journey to becoming an expert!
+
+",86.66666666666667,42,"
+
+Title: ""Excellence in Equations""
+
+Objective: This worksheet aims to boost your abilities in setting up and solving systems of equations from word problems. The selected problems involve a myriad of daily-life scenarios to make the learning process intriguing and relatable.
+
+Problem 1: 
+In a park, the number of birds is four more than three times the number of squirrels. If there are 64 animals in total, how many birds and squirrels wander in the park?
+
+Quick guides:
+1. We’ll denote ‘B' for birds and ‘S' for squirrels. 
+2. From the given problem, form the following equations, ‘B + S = 64’ and ‘B = 3S + 4’.
+3. Applying an appropriate method, solve these equations to find the number of birds and squirrels.
+
+Problem 2: 
+A cafe sells two types of beverages - coffee and tea. Each coffee is sold for $4 and tea for $3. If total sales from 48 beverages were $172, determine how many cups of coffee and tea were sold? 
+
+Quick guides:
+1. Let's denote the number of coffees as 'C' and teas as 'T'.
+2. From the details provided, we can form these equations: 'C + T = 48' and '4C + 3T = 172'.
+3. Solve these equations to figure out the number of coffees and teas sold.
+
+Problem 3: 
+In a forest, there are rabbits and deers. The number of rabbits is 7 less than twice the number of deers. If there are 45 animals in total, how many rabbits and deers are in the forest?
+
+Quick guides:
+1. Let’s denote ‘R’ for rabbits and ‘D’ for deers.
+2. According to the problem, we can form these equations: 'R + D = 45' and 'R = 2D - 7'.
+3. Solve these equations to find the number of rabbits and deers.
+
+Problem 4: 
+A bookstore sells two types of books - fiction and non-fiction. Each fiction book is sold for $6, and non-fiction books are sold for $8. If total sales from 26 books were $172, how many fiction and non-fiction books were sold?
+
+Quick guides:
+1. Let's assign 'F' to represent Fiction books and 'N' for Non-fiction books.
+2. From the provided scenario, develop these equations: 'F + N = 26' and '6F + 8N = 172'.
+3. Apply an appropriate method and solve these equations to find the number of fiction and non-fiction books sold.
+
+Remember, setting up and solving a system of equations involves understanding the problem, identifying the variables and equations, and applying a suitable method to find the solution. Having a structured approach and practicing consistently will make you an expert in no time.
+
+",74.44444444444444,50
