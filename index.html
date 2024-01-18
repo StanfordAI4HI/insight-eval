@@ -54,6 +54,7 @@
 
     <script>
       const jsPsych = initJsPsych();
+      let catchTrialFail = false;
 
       function parseCsv(csvText) {
         return new Promise((resolve, reject) => {
@@ -191,14 +192,12 @@
 
         const catchTrialIndex = 5;
         const redirectUrl = 'https://app.prolific.com/submissions/complete?cc=CD2QDIIS';
-        let experimentEndedEarly = false;
+        
         let catchTrial = createCatchTrial(catchData);
         catchTrial.on_finish = function(data) {
           // Check if the participant failed the catch trial
           if (data.response >= -0.2) {
-            experimentEndedEarly = true;
-            window.location.href = redirectUrl;
-            jsPsych.endExperiment('<p>Redirecting...</p>');
+            catchTrialFail = true;
           }
         };        
  
@@ -217,13 +216,11 @@
         trials.splice(catchTrialIndex, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
-          if (!experimentEndedEarly) {
-            const submitButtonHTML = `
-              <div id="submit-container">
-                <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
-              </div>`;
-            document.body.insertAdjacentHTML('beforeend', submitButtonHTML);
-          }
+          const submitButtonHTML = `
+            <div id="submit-container">
+              <button id="submit-btn" onclick="submitToProliferate()">Submit</button>
+            </div>`;
+          document.body.insertAdjacentHTML('beforeend', submitButtonHTML);         
         });
       }
 
@@ -249,6 +246,9 @@
 
         // Display a thank you message
         document.body.innerHTML = '<p>Please wait for 5 seconds before closing the page. Thank you for completing the survey!</p>';
+        if (catchTrialFail) {
+          window.location.href = redirectUrl;
+        }
       }
 
       setupExperiment();
