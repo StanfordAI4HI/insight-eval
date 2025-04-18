@@ -183,21 +183,31 @@
                 </div>
               </div>`,
             choices: ['Next'],
-            on_finish: function(data) {
-              const responses = group.map((row) => {
-                const sliderId = `insight-${row.pair_insight_id}`;
-                const sliderElem = document.getElementById(sliderId);
-                return {
-                  pair_insight_id: row.pair_insight_id,
-                  index_A: row.index_A,
-                  index_B: row.index_B,
-                  value: sliderElem ? parseFloat(sliderElem.value) : null
-                };
-              });
+            on_load: function() {
+              const button = document.querySelector('button');
+              button.addEventListener('click', () => {
+                const responses = group.map((row) => {
+                  const sliderId = `insight-${row.pair_insight_id}`;
+                  const sliderElem = document.getElementById(sliderId);
+                  return {
+                    pair_insight_id: row.pair_insight_id,
+                    index_A: row.index_A,
+                    index_B: row.index_B,
+                    value: sliderElem ? parseFloat(sliderElem.value) : null
+                  };
+                });
 
-              data.pair_id = pair_id;
-              data.insight_responses = responses;
+                // Save to jsPsych's internal data store so it gets picked up by `jsPsych.data.get()`
+                jsPsych.getCurrentTrial().data = {
+                  pair_id: pair_id,
+                  insight_responses: responses
+                };
+
+                // Then continue to the next trial manually
+                jsPsych.finishTrial();
+              });
             }
+
           });
         }
 
