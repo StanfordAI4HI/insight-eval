@@ -109,11 +109,11 @@
               </div>
               <div class="instructions-container"> <!-- Existing instructions container -->
                 <div class="instruction-box">
-                  <label for="instruction-A">Worksheet A</label>
+                  <label for="instruction-A">Abstract1</label>
                   <div class="instruction" id="instruction-A">${row.abstract1.replace(/\n/g, '<br>')}</div>
                 </div>
                 <div class="instruction-box">
-                  <label for="instruction-B">Worksheet B</label>
+                  <label for="instruction-B">Abstract2</label>
                   <div class="instruction" id="instruction-B">${row.abstract2.replace(/\n/g, '<br>')}</div>
                 </div>
               </div>
@@ -121,7 +121,7 @@
                 <strong>${row.insight.replace(/\n/g, '<br>')}</strong><br>
               </div>
             </div>`,
-          labels: ['Not insightful at all', 'Neutral', 'Extremely insightly'],
+          labels: ['Not insightful at all', 'Neutral', 'Extremely insightful'],
           min: -1,
           max: 1,
           start: 0,
@@ -134,44 +134,72 @@
         }));
         return results;
       }
-
-      // Function to create a single catch trial
-      function createCatchTrial(csvData) {
-        // Assuming the catch trial csv has only one row
-        const row = csvData[0];
-        return {
-          type: jsPsychHtmlSliderResponse,
-          stimulus: `
-            <div class="content-container"> <!-- New container for the entire content -->
-              <div style="text-align: left; margin-bottom: 20px;"> <!-- Container for the text -->
-                <strong>Which worksheet would be more useful for the 8th-grade student in terms of improving their test performance? Please adjust the slider below. Please keep in mind that the student will not receive any extra feedback or guidance beyond what is provided in the worksheet itself. Here are two sample test questions:</strong><br>
-                <strong>Question #1: Two containers of gasoline hold a total of fifty gallons. The big container can hold ten gallons less than twice the small container. How many gallons does the big container hold?</strong><br>
-                <strong>Question #2: Shelly spent 10 minutes jogging and 20 minutes cycling and burned 300 calories. The next day, Shelly swapped times, doing 20 minutes of jogging and 10 minutes of cycling and burned the same number of calories. How many calories were burned for each minute of jogging?</strong>
-              </div>
-              <div class="instructions-container"> <!-- Existing instructions container -->
-                <div class="instruction-box">
-                  <label for="instruction-A">Worksheet A</label>
-                  <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
-                </div>
-                <div class="instruction-box">
-                  <label for="instruction-B">Worksheet B</label>
-                  <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
-                </div>
-              </div>
-            </div>`,
-          labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
-          min: -1,
-          max: 1,
-          start: 0,
-          step: 0.01,
-          slider_width: 400,
-          data: {
-            index_A: row.index_A,
-            index_B: row.index_B
-          }
-        };
-      }
  
+      function createTrialsFromGroupedData(groupedData) {
+        const trials = [];
+
+        for (const pair_id in groupedData) {
+          const group = groupedData[pair_id];
+          const { abstract1, abstract2 } = group[0]; // same for group
+
+          // HTML for insights and sliders
+          const insightSliderHtml = group.map((row, idx) => {
+            const insightId = `insight-${pair_id}-${idx}`;
+            return `
+              <div style="margin-bottom: 20px;">
+                <div><strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}</div>
+                <input type="range" min="-1" max="1" step="0.01" value="0" class="slider" id="${insightId}" style="width: 400px;">
+                <div style="display: flex; justify-content: space-between; width: 400px;">
+                  <span>Not insightful at all</span>
+                  <span>Neutral</span>
+                  <span>Extremely insightful</span>
+                </div>
+              </div>
+            `;
+          }).join("");
+
+          trials.push({
+            type: jsPsychHtmlButtonResponse,
+            stimulus: `
+              <div class="content-container">
+                <div style="text-align: left; margin-bottom: 20px;">
+                  <strong>Which worksheet would be more useful for the 8th-grade student in terms of improving their test performance? Adjust the sliders below. The student will not receive extra guidance beyond the worksheet itself. Here are two sample test questions:</strong><br>
+                  <strong>Question #1:</strong> Two containers of gasoline hold a total of fifty gallons...<br>
+                  <strong>Question #2:</strong> Shelly spent 10 minutes jogging and 20 minutes cycling...
+                </div>
+                <div class="instructions-container">
+                  <div class="instruction-box">
+                    <label>Abstract1</label>
+                    <div class="instruction">${abstract1.replace(/\n/g, '<br>')}</div>
+                  </div>
+                  <div class="instruction-box">
+                    <label>Abstract2</label>
+                    <div class="instruction">${abstract2.replace(/\n/g, '<br>')}</div>
+                  </div>
+                </div>
+                <div style="margin-top: 20px;">
+                  ${insightSliderHtml}
+                </div>
+              </div>`,
+            choices: ['Next'],
+            on_finish: function(data) {
+              const insightResponses = group.map((_, idx) => {
+                const sliderId = `insight-${pair_id}-${idx}`;
+                const sliderValue = document.getElementById(sliderId).value;
+                return parseFloat(sliderValue);
+              });
+
+              // Store responses in data
+              data.pair_id = pair_id;
+              data.responses = insightResponses;
+            }
+          });
+        }
+
+        return trials;
+      }
+
+
       const consentForm = {
         type: jsPsychHtmlButtonResponse,
         stimulus: `
@@ -195,12 +223,29 @@
       // Main experiment setup
       async function setupExperiment() {
         const csvData = await fetchCsvData('survey_data.csv');
-        // const catchData = await fetchCsvData('catch_trial.csv');
-        const subsetSize = 5;
-        const randomSubset = getRandomSubset(csvData, subsetSize);
-        const trials = createTrialsFromCsvData(randomSubset);
+        const grouped = {};
+        for (const row of csvData) {
+          if (!grouped[row.pair_id]) {
+            grouped[row.pair_id] = [];
+          }
+          grouped[row.pair_id].push(row);
+        }
+        const pairIds = Object.keys(grouped);
+        const sampledPairIds = getRandomSubset(pairIds, 10);
 
-        const catchTrialIndex = 5;
+        // Step 3: Build trials using only the sampled pair_ids
+        const sampledGroups = {};
+        for (const id of sampledPairIds) {
+          sampledGroups[id] = grouped[id];
+        }
+
+        const trials = createTrialsFromGroupedData(sampledGroups);
+        // // const catchData = await fetchCsvData('catch_trial.csv');
+        // const subsetSize = 5;
+        // const randomSubset = getRandomSubset(csvData, subsetSize);
+        // const trials = createTrialsFromCsvData(randomSubset);
+
+        // const catchTrialIndex = 5;
         
         // let catchTrial = createCatchTrial(catchData);
         // catchTrial.on_finish = function(data) {
