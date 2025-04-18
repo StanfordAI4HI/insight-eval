@@ -110,15 +110,18 @@
               <div class="instructions-container"> <!-- Existing instructions container -->
                 <div class="instruction-box">
                   <label for="instruction-A">Worksheet A</label>
-                  <div class="instruction" id="instruction-A">${row.instruction_A.replace(/\n/g, '<br>')}</div>
+                  <div class="instruction" id="instruction-A">${row.abstract1.replace(/\n/g, '<br>')}</div>
                 </div>
                 <div class="instruction-box">
                   <label for="instruction-B">Worksheet B</label>
-                  <div class="instruction" id="instruction-B">${row.instruction_B.replace(/\n/g, '<br>')}</div>
+                  <div class="instruction" id="instruction-B">${row.abstract2.replace(/\n/g, '<br>')}</div>
                 </div>
               </div>
+              <div style="text-align: left; margin-bottom: 20px;"> <!-- Container for the text -->
+                <strong>${row.insight.replace(/\n/g, '<br>')}</strong><br>
+              </div>
             </div>`,
-          labels: ['Strongly prefer A', 'Neutral', 'Strongly prefer B'],
+          labels: ['Not insightful at all', 'Neutral', 'Extremely insightly'],
           min: -1,
           max: 1,
           start: 0,
@@ -191,21 +194,21 @@
 
       // Main experiment setup
       async function setupExperiment() {
-        const csvData = await fetchCsvData('worksheet_pairs_20240205_10_selectedv7.csv');
-        const catchData = await fetchCsvData('catch_trial.csv');
+        const csvData = await fetchCsvData('survey_data.csv');
+        // const catchData = await fetchCsvData('catch_trial.csv');
         const subsetSize = 5;
         const randomSubset = getRandomSubset(csvData, subsetSize);
         const trials = createTrialsFromCsvData(randomSubset);
 
         const catchTrialIndex = 5;
         
-        let catchTrial = createCatchTrial(catchData);
-        catchTrial.on_finish = function(data) {
-          // Check if the participant failed the catch trial
-          if (data.response >= -0.2) {
-            catchTrialFail = true;
-          }
-        };        
+        // let catchTrial = createCatchTrial(catchData);
+        // catchTrial.on_finish = function(data) {
+        //   // Check if the participant failed the catch trial
+        //   if (data.response >= -0.2) {
+        //     catchTrialFail = true;
+        //   }
+        // };        
  
         // Introduction trial
         const introduction = {
@@ -219,7 +222,7 @@
         };
         trials.unshift(introduction);
         trials.unshift(consentForm);
-        trials.splice(catchTrialIndex, 0, catchTrial);
+        // trials.splice(catchTrialIndex, 0, catchTrial);
 
         jsPsych.run(trials).then(() => {
           const submitButtonHTML = `
@@ -238,8 +241,8 @@
         const responses = trialData.map(trial => {
           return {
             ...trial, // includes all trial data
-            index_A: trial.index_A,
-            index_B: trial.index_B
+            pair_id: trial.pair_id,
+            pair_insight_id: trial.pair_insight_id
           };
         });
 
