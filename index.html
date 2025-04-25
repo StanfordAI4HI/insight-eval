@@ -109,7 +109,7 @@
           const { abstract1, abstract2 } = group[0];
 
           const questions = group.flatMap((row, idx) => {
-            const basePrompt = `<strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}`;
+            const basePrompt = `<br><strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}`;
             const id = row.pair_insight_id;
             return [
               {
@@ -126,7 +126,7 @@
                 required: true
               },
               {
-                prompt: `<br><br>How likely is it that this is true?`,
+                prompt: `How likely is it that this is true?`,
                 name: `${id}_believability`,
                 labels: [
                   '1<br>Definitely false',
@@ -139,7 +139,7 @@
                 required: true
               },
               {
-                prompt: `<br><br>How new or unfamiliar is this idea to you?`,
+                prompt: `How new or unfamiliar is this idea to you?`,
                 name: `${id}_novelty`,
                 labels: [
                   '1<br>Very familiar',
@@ -152,7 +152,7 @@
                 required: true
               },
               {
-                prompt: `<br><br>If this statement were true, how exciting or impactful would it be for the research community?`,
+                prompt: `If this statement were true, how exciting or impactful would it be for the research community?`,
                 name: `${id}_excitement`,
                 labels: [
                   '1<br>Not at all exciting',
