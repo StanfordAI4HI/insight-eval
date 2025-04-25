@@ -225,7 +225,7 @@
 
       // Main experiment setup
       async function setupExperiment() {
-        const csvData = await fetchCsvData('survey_data.csv');
+        const csvData = await fetchCsvData('survey_data_selected.csv');
         console.log("Total rows loaded from CSV:", csvData.length);
         const grouped = {};
         for (const row of csvData) {
