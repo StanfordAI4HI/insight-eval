@@ -179,7 +179,7 @@
             choices: ['Next'],
             response_ends_trial: false,
             on_load: function() {
-              const button = document.querySelector('button');
+              const button = document.querySelector('.jspsych-html-button-response-button');
               button.addEventListener('click', () => {
                 const responses = group.map((row) => {
                   const sliderId = `insight-${row.pair_insight_id}`;
