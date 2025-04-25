@@ -139,23 +139,64 @@
         Object.entries(groupedData).forEach(([pair_id, group], i) => {
           const { abstract1, abstract2 } = group[0];
 
-          const questions = group.map((row, idx) => ({
-            prompt: `<strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}`,
-            name: row.pair_insight_id,
-            labels: [
-              '1<br>Not insightful at all',
-              '2',
-              '3<br>Mostly not insightful',
-              '4',
-              '5<br>Somewhat insightful',
-              '6<br>Reasonably insightful',
-              '7',
-              '8<br>Clearly insightful',
-              '9',
-              '10<br>Very insightful'
-            ],
-            required: true
-          }));
+          const questions = group.flatMap((row, idx) => {
+            const basePrompt = `<strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}`;
+            const id = row.pair_insight_id;
+            return [
+              {
+                prompt: `${basePrompt}<br><br>How surprising is this to you?`,
+                name: `${id}_surprise`,
+                labels: [
+                  '1<br>Not surprising at all',
+                  '2', '3<br>Mostly expected',
+                  '4', '5<br>Somewhat surprising',
+                  '6<br>Quite surprising',
+                  '7', '8<br>Very surprising',
+                  '9', '10<br>Extremely surprising'
+                ],
+                required: true
+              },
+              {
+                prompt: `${basePrompt}<br><br>How likely is it that this is true?`,
+                name: `${id}_believability`,
+                labels: [
+                  '1<br>Definitely false',
+                  '2', '3<br>Unlikely',
+                  '4', '5<br>Somewhat likely',
+                  '6<br>Likely',
+                  '7', '8<br>Very likely',
+                  '9', '10<br>Definitely true'
+                ],
+                required: true
+              },
+              {
+                prompt: `${basePrompt}<br><br>How new or unfamiliar is this idea to you?`,
+                name: `${id}_novelty`,
+                labels: [
+                  '1<br>Very familiar',
+                  '2', '3<br>Somewhat familiar',
+                  '4', '5<br>Neutral',
+                  '6<br>Somewhat novel',
+                  '7', '8<br>Quite novel',
+                  '9', '10<br>Extremely novel'
+                ],
+                required: true
+              },
+              {
+                prompt: `${basePrompt}<br><br>How excited or interested would you be if this were true?`,
+                name: `${id}_excitement`,
+                labels: [
+                  '1<br>Not at all',
+                  '2', '3<br>A little interested',
+                  '4', '5<br>Moderately interested',
+                  '6<br>Interested',
+                  '7', '8<br>Very interested',
+                  '9', '10<br>Extremely excited'
+                ],
+                required: true
+              }
+            ];
+          });
 
           trials.push({
             type: jsPsychSurveyLikert,
@@ -232,7 +273,7 @@
         console.log("Valid groups (non-empty):", Object.keys(validGroups).length);
 
         const pairIds = Object.keys(validGroups);
-        const sampledPairIds = getRandomSubset(pairIds, 10);
+        const sampledPairIds = getRandomSubset(pairIds, 3);
         console.log("Sampled pair_ids:", sampledPairIds);
 
         // Step 3: Build trials using only the sampled pair_ids
