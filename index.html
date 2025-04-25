@@ -103,9 +103,6 @@
           stimulus: `
             <div class="content-container"> <!-- New container for the entire content -->
               <div style="text-align: left; margin-bottom: 20px;"> <!-- Container for the text -->
-                <strong>Which worksheet would be more useful for the 8th-grade student in terms of improving their test performance? Please adjust the slider below. Please keep in mind that the student will not receive any extra feedback or guidance beyond what is provided in the worksheet itself. Here are two sample test questions:</strong><br>
-                <strong>Question #1: Two containers of gasoline hold a total of fifty gallons. The big container can hold ten gallons less than twice the small container. How many gallons does the big container hold?</strong><br>
-                <strong>Question #2: Shelly spent 10 minutes jogging and 20 minutes cycling and burned 300 calories. The next day, Shelly swapped times, doing 20 minutes of jogging and 10 minutes of cycling and burned the same number of calories. How many calories were burned for each minute of jogging?</strong>
               </div>
               <div class="instructions-container"> <!-- Existing instructions container -->
                 <div class="instruction-box">
@@ -163,11 +160,6 @@
             type: jsPsychHtmlButtonResponse,
             stimulus: `
               <div class="content-container">
-                <div style="text-align: left; margin-bottom: 20px;">
-                  <strong>Which worksheet would be more useful for the 8th-grade student in terms of improving their test performance? Adjust the sliders below. The student will not receive extra guidance beyond the worksheet itself. Here are two sample test questions:</strong><br>
-                  <strong>Question #1:</strong> Two containers of gasoline hold a total of fifty gallons...<br>
-                  <strong>Question #2:</strong> Shelly spent 10 minutes jogging and 20 minutes cycling...
-                </div>
                 <div class="instructions-container">
                   <div class="instruction-box">
                     <label>Abstract1</label>
@@ -191,8 +183,6 @@
                   const sliderElem = document.getElementById(sliderId);
                   return {
                     pair_insight_id: row.pair_insight_id,
-                    index_A: row.index_A,
-                    index_B: row.index_B,
                     value: sliderElem ? parseFloat(sliderElem.value) : null
                   };
                 });
@@ -223,10 +213,6 @@
               <h2 style="text-align:center;">Consent Form</h2>
                 <div style="margin: 20px;">
                   <!-- Add your consent form text here -->
-                  <p><strong>DESCRIPTION</strong>: You are invited to participate in a research study on evaluating math worksheets. This study is open to individuals who have completed an Algebra course and have experience teaching students above the third-grade level. You will be asked to compare math worksheets and answer by adjusting sliders and pressing buttons. Participation in this research is voluntary, and you are free to withdraw your consent at any time. </p>
-                  <p><strong>TIME INVOLVEMENT</strong>: Your participation will take approximately 12 minutes.</p>
-                  <p><strong>PAYMENTS</strong>: You will receive $2.40 as payment for your participation.</p>
-                  <p><strong>PRIVACY AND CONFIDENTIALITY</strong>: The risks associated with this study are minimal. Study data will be stored securely, in compliance with Stanford University standards, minimizing the risk of confidentiality breach. Your individual privacy will be maintained during the research and in all published and written data resulting from the study.</p>
                   <p><strong>CONTACT INFORMATION</strong>: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Noah Goodman (ngoodman@stanford.edu).</p>
                   <p>Independent Contact: If you are not satisfied with how this study is being conducted, or if you have any concerns, complaints, or general questions about the research or your rights as a participant, please contact the Stanford Institutional Review Board (IRB) to speak to someone independent of the research team at 650-723-2480 or toll free at 1-866-680-2906, or email at irbnonmed@stanford.edu. You can also write to the Stanford IRB, Stanford University, 1705 El Camino Real, Palo Alto, CA 94306.</p>
                   <p>Please save or print a copy of this page for your records.</p>
@@ -281,7 +267,7 @@
                 </div>`,
             choices: ['Begin']
         };
-        trials.unshift(introduction);
+        // trials.unshift(introduction);
         trials.unshift(consentForm);
         // trials.splice(catchTrialIndex, 0, catchTrial);
 
