@@ -17,8 +17,9 @@
 
       .instructions-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between; /* tighter than space-around */
         align-items: flex-start;
+        gap: 20px; /* optional: adds small space between the abstracts */
       }
 
       .instruction-box {
@@ -46,7 +47,11 @@
         margin: 0 auto; /* Center the container */
         width: 60%; /* Set the width to half of the viewport width */
         text-align: left; /* Center the text inside the container */
-      }      
+      }
+
+      .jspsych-survey-likert-question p {
+        text-align: left !important;
+      }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jspsych/jspsych.js"></script>
@@ -96,42 +101,6 @@
         }
         return shuffled.slice(0, subsetSize); // Return the subset
       }
-
-      // Function to create trials from CSV data
-      function createTrialsFromCsvData(csvData) {
-        const results = csvData.map(row => ({
-          type: jsPsychHtmlSliderResponse,
-          stimulus: `
-            <div class="content-container"> <!-- New container for the entire content -->
-              <div style="text-align: left; margin-bottom: 20px;"> <!-- Container for the text -->
-              </div>
-              <div class="instructions-container"> <!-- Existing instructions container -->
-                <div class="instruction-box">
-                  <label for="instruction-A">Abstract1</label>
-                  <div class="instruction" id="instruction-A">${row.abstract1.replace(/\n/g, '<br>')}</div>
-                </div>
-                <div class="instruction-box">
-                  <label for="instruction-B">Abstract2</label>
-                  <div class="instruction" id="instruction-B">${row.abstract2.replace(/\n/g, '<br>')}</div>
-                </div>
-              </div>
-              <div style="text-align: left; margin-bottom: 20px;"> <!-- Container for the text -->
-                <strong>${row.insight.replace(/\n/g, '<br>')}</strong><br>
-              </div>
-            </div>`,
-          labels: ['Not insightful at all', 'Neutral', 'Extremely insightful'],
-          min: -1,
-          max: 1,
-          start: 0,
-          step: 0.01,
-          slider_width: 400,
-          data: {
-            index_A: row.index_A,
-            index_B: row.index_B
-          }
-        }));
-        return results;
-      }
  
       function createTrialsFromGroupedData(groupedData) {
         const trials = [];
@@ -157,7 +126,7 @@
                 required: true
               },
               {
-                prompt: `${basePrompt}<br><br>How likely is it that this is true?`,
+                prompt: `<br><br>How likely is it that this is true?`,
                 name: `${id}_believability`,
                 labels: [
                   '1<br>Definitely false',
@@ -170,7 +139,7 @@
                 required: true
               },
               {
-                prompt: `${basePrompt}<br><br>How new or unfamiliar is this idea to you?`,
+                prompt: `<br><br>How new or unfamiliar is this idea to you?`,
                 name: `${id}_novelty`,
                 labels: [
                   '1<br>Very familiar',
@@ -183,16 +152,20 @@
                 required: true
               },
               {
-                prompt: `${basePrompt}<br><br>How excited or interested would you be if this were true?`,
+                prompt: `<br><br>If this statement were true, how exciting or impactful would it be for the research community?`,
                 name: `${id}_excitement`,
                 labels: [
-                  '1<br>Not at all',
-                  '2', '3<br>A little interested',
-                  '4', '5<br>Moderately interested',
-                  '6<br>Interested',
-                  '7', '8<br>Very interested',
-                  '9', '10<br>Extremely excited'
-                ],
+                  '1<br>Not at all exciting',
+                  '2',
+                  '3<br>Minimal excitement',
+                  '4',
+                  '5<br>Somewhat exciting',
+                  '6<br>Moderately exciting',
+                  '7',
+                  '8<br>Very exciting',
+                  '9',
+                  '10<br>Extremely exciting'
+                ]
                 required: true
               }
             ];
@@ -201,7 +174,7 @@
           trials.push({
             type: jsPsychSurveyLikert,
             preamble: `
-              <h3 style="text-align:center;">Trial ${i + 1} of 10</h3>
+              <h3 style="text-align:center;">Trial ${i + 1} of 3</h3>
               <div class="instructions-container">
                 <div class="instruction-box">
                   <label>Abstract1</label>
@@ -212,7 +185,7 @@
                   <div class="instruction">${abstract2.replace(/\n/g, '<br>')}</div>
                 </div>
               </div><br>
-              <p style="margin-bottom:10px;"><strong>Rate the insightfulness of each insight below:</strong></p>
+              <p style="margin-bottom:10px;"><strong>Evaluate each insight below:</strong></p>
             `,
             questions: questions,
             on_finish: function(data) {
