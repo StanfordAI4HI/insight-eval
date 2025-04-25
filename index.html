@@ -159,6 +159,8 @@
           trials.push({
             type: jsPsychHtmlButtonResponse,
             stimulus: `
+              <h3 style="text-align:center;">Trial ${Object.keys(groupedData).indexOf(pair_id) + 1} of 10</h3>
+              ` + `
               <div class="content-container">
                 <div class="instructions-container">
                   <div class="instruction-box">
