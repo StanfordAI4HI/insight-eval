@@ -135,74 +135,57 @@
       function createTrialsFromGroupedData(groupedData) {
         const trials = [];
 
-        for (const pair_id in groupedData) {
-          const group = groupedData[pair_id];
+        Object.entries(groupedData).forEach(([pair_id, group], i) => {
           const { abstract1, abstract2 } = group[0];
 
-          // Build slider blocks using pair_insight_id as the ID
-          const insightSliderHtml = group.map((row, idx) => {
-            const sliderId = `insight-${row.pair_insight_id}`;
-            return `
-              <div style="margin-bottom: 30px;">
-                <div><strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}</div>
-                <input type="range" min="-1" max="1" step="0.01" value="0"
-                       class="slider" id="${sliderId}" style="width: 400px; margin-top: 5px;">
-                <div style="display: flex; justify-content: space-between; width: 400px;">
-                  <span>Not insightful at all</span>
-                  <span>Neutral</span>
-                  <span>Extremely insightful</span>
-                </div>
-              </div>
-            `;
-          }).join("");
+          const questions = group.map((row, idx) => ({
+            prompt: `<strong>Insight ${idx + 1}:</strong> ${row.insight.replace(/\n/g, '<br>')}`,
+            name: row.pair_insight_id,
+            labels: [
+              '1<br>Not insightful at all',
+              '2',
+              '3',
+              '4',
+              '5<br>Leaning not insightful',
+              '6<br>Leaning insightful',
+              '7',
+              '8',
+              '9',
+              '10<br>Very novel'
+            ],
+            required: true
+          }));
 
           trials.push({
-            type: jsPsychHtmlButtonResponse,
-            stimulus: `
-              <h3 style="text-align:center;">${Object.keys(groupedData).indexOf(pair_id) + 1} of 10</h3>
-              ` + `
-              <div class="content-container">
-                <div class="instructions-container">
-                  <div class="instruction-box">
-                    <label>Abstract1</label>
-                    <div class="instruction">${abstract1.replace(/\n/g, '<br>')}</div>
-                  </div>
-                  <div class="instruction-box">
-                    <label>Abstract2</label>
-                    <div class="instruction">${abstract2.replace(/\n/g, '<br>')}</div>
-                  </div>
+            type: jsPsychSurveyLikert,
+            preamble: `
+              <h3 style="text-align:center;">Trial ${i + 1} of 10</h3>
+              <div class="instructions-container">
+                <div class="instruction-box">
+                  <label>Abstract1</label>
+                  <div class="instruction">${abstract1.replace(/\n/g, '<br>')}</div>
                 </div>
-                <div style="margin-top: 30px;">
-                  ${insightSliderHtml}
+                <div class="instruction-box">
+                  <label>Abstract2</label>
+                  <div class="instruction">${abstract2.replace(/\n/g, '<br>')}</div>
                 </div>
-              </div>`,
-            choices: ['Next'],
-            response_ends_trial: false,
-            on_load: function() {
-              const button = document.querySelector('.jspsych-html-button-response-button');
-              button.addEventListener('click', () => {
-                const responses = group.map((row) => {
-                  const sliderId = `insight-${row.pair_insight_id}`;
-                  const sliderElem = document.getElementById(sliderId);
-                  return {
-                    pair_insight_id: row.pair_insight_id,
-                    value: sliderElem ? parseFloat(sliderElem.value) : null
-                  };
-                });
+              </div><br>
+              <p style="margin-bottom:10px;"><strong>Rate the insightfulness of each insight below:</strong></p>
+            `,
+            questions: questions,
+            on_finish: function(data) {
+              const responses = {};
+              for (const key in data.response) {
+                responses[key] = parseInt(data.response[key]) + 1; // convert from 0-indexed to 1–10 scale
+              }
 
-                // Save to jsPsych's internal data store so it gets picked up by `jsPsych.data.get()`
-                jsPsych.getCurrentTrial().data = {
-                  pair_id: pair_id,
-                  insight_responses: responses
-                };
-
-                // Then continue to the next trial manually
-                jsPsych.finishTrial();
-              });
+              jsPsych.getCurrentTrial().data = {
+                pair_id: pair_id,
+                insight_responses: responses
+              };
             }
-
           });
-        }
+        });
 
         return trials;
       }
